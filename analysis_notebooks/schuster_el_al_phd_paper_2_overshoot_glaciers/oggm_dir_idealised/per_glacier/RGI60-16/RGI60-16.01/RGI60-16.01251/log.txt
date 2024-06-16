@@ -1,0 +1,325 @@
+2023-03-02T20:55:55;glacier_statistics;time:0.5040004253387451;SUCCESS
+2023-03-02T20:57:42;define_glacier_region;time:3.317237615585327;SUCCESS
+2023-03-02T20:59:54;glacier_statistics;time:0.5279443264007568;SUCCESS
+2023-03-02T21:00:21;process_dem;time:0.032010793685913086;SUCCESS
+2023-03-02T21:00:21;simple_glacier_masks;time:0.5985803604125977;SUCCESS
+2023-03-02T21:00:37;elevation_band_flowline;time:0.049787044525146484;SUCCESS
+2023-03-02T21:00:49;fixed_dx_elevation_band_flowline;time:0.5261247158050537;SUCCESS
+2023-03-02T21:01:08;compute_downstream_line;time:0.6347393989562988;SUCCESS
+2023-03-02T21:01:42;compute_downstream_bedshape;time:1.513535737991333;SUCCESS
+2023-03-02T21:02:30;glacier_statistics;time:0.5428752899169922;SUCCESS
+2023-05-24T15:18:57;process_gswp3_w5e5_data;time:0.1602935791015625;SUCCESS
+2023-05-24T15:18:57;process_climate_data;time:0.16051626205444336;SUCCESS
+2023-05-24T15:22:04;mb_calibration_from_scalar_mb;time:0.022445201873779297;SUCCESS
+2023-05-24T15:22:04;mb_calibration_from_geodetic_mb;time:4.153915166854858;SUCCESS
+2023-05-24T15:26:02;apparent_mb_from_any_mb;time:0.01472783088684082;SUCCESS
+2023-05-24T15:26:03;prepare_for_inversion;time:0.0013017654418945312;SUCCESS
+2023-05-24T15:26:03;mass_conservation_inversion;time:0.0027709007263183594;SUCCESS
+2023-05-24T15:26:04;filter_inversion_output;time:0.0010988712310791016;SUCCESS
+2023-05-24T15:26:04;get_inversion_volume;time:0.0001468658447265625;SUCCESS
+2023-05-24T15:26:04;prepare_for_inversion;time:0.0013430118560791016;SUCCESS
+2023-05-24T15:26:04;mass_conservation_inversion;time:0.00656580924987793;SUCCESS
+2023-05-24T15:26:04;filter_inversion_output;time:0.0010247230529785156;SUCCESS
+2023-05-24T15:26:05;get_inversion_volume;time:0.00015282630920410156;SUCCESS
+2023-05-24T15:26:05;prepare_for_inversion;time:0.0014340877532958984;SUCCESS
+2023-05-24T15:26:05;mass_conservation_inversion;time:0.002666950225830078;SUCCESS
+2023-05-24T15:26:05;filter_inversion_output;time:0.0009565353393554688;SUCCESS
+2023-05-24T15:26:05;get_inversion_volume;time:0.00014495849609375;SUCCESS
+2023-05-24T15:26:06;prepare_for_inversion;time:0.0014772415161132812;SUCCESS
+2023-05-24T15:26:06;mass_conservation_inversion;time:0.003139019012451172;SUCCESS
+2023-05-24T15:26:06;filter_inversion_output;time:0.0008370876312255859;SUCCESS
+2023-05-24T15:26:06;get_inversion_volume;time:0.000202178955078125;SUCCESS
+2023-05-24T15:26:06;prepare_for_inversion;time:0.0014767646789550781;SUCCESS
+2023-05-24T15:26:07;mass_conservation_inversion;time:0.003175020217895508;SUCCESS
+2023-05-24T15:26:07;filter_inversion_output;time:0.0010731220245361328;SUCCESS
+2023-05-24T15:26:07;get_inversion_volume;time:0.0001468658447265625;SUCCESS
+2023-05-24T15:26:07;prepare_for_inversion;time:0.0015926361083984375;SUCCESS
+2023-05-24T15:26:08;mass_conservation_inversion;time:0.0031070709228515625;SUCCESS
+2023-05-24T15:26:08;filter_inversion_output;time:0.0010213851928710938;SUCCESS
+2023-05-24T15:26:08;get_inversion_volume;time:0.00014448165893554688;SUCCESS
+2023-05-24T15:26:08;prepare_for_inversion;time:0.001461029052734375;SUCCESS
+2023-05-24T15:26:08;mass_conservation_inversion;time:0.0030798912048339844;SUCCESS
+2023-05-24T15:26:09;filter_inversion_output;time:0.0010061264038085938;SUCCESS
+2023-05-24T15:26:09;get_inversion_volume;time:0.00020265579223632812;SUCCESS
+2023-05-24T15:26:09;prepare_for_inversion;time:0.0015635490417480469;SUCCESS
+2023-05-24T15:26:09;mass_conservation_inversion;time:0.0031881332397460938;SUCCESS
+2023-05-24T15:26:10;filter_inversion_output;time:0.0009653568267822266;SUCCESS
+2023-05-24T15:26:10;get_inversion_volume;time:0.0001575946807861328;SUCCESS
+2023-05-24T15:26:10;init_present_time_glacier;time:0.00819706916809082;SUCCESS
+2023-05-24T15:26:30;glacier_statistics;time:0.4919407367706299;SUCCESS
+2023-05-24T15:27:18;climate_statistics;time:0.5340423583984375;SUCCESS
+2023-05-24T15:27:47;fixed_geometry_mass_balance;time:0.02985095977783203;SUCCESS
+2023-08-15T18:25:48;flowline_model_run_historical;time:0.20275640487670898;SUCCESS
+2023-08-15T18:25:48;run_from_climate_data_historical;time:0.21633124351501465;SUCCESS
+2023-08-15T18:45:24;run_dynamic_melt_f_calibration_spinup_historical;time:13.137001037597656;SUCCESS
+2023-08-15T19:07:44;glacier_statistics;time:0.5434267520904541;SUCCESS
+2024-02-28T11:02:38;flowline_model_run_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 30.916666666666668
+2024-02-28T11:02:38;run_constant_climate_with_bias_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 30.916666666666668
+2024-02-28T11:02:38;run_with_hydro_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 30.916666666666668
+2024-02-28T11:02:39;flowline_model_run_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 31.333333333333332
+2024-02-28T11:02:39;run_constant_climate_with_bias_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 31.333333333333332
+2024-02-28T11:02:39;run_with_hydro_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 31.333333333333332
+2024-02-28T11:02:40;flowline_model_run_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 31.916666666666668
+2024-02-28T11:02:40;run_constant_climate_with_bias_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 31.916666666666668
+2024-02-28T11:02:40;run_with_hydro_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 31.916666666666668
+2024-02-28T11:02:41;flowline_model_run_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 32.5
+2024-02-28T11:02:41;run_constant_climate_with_bias_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 32.5
+2024-02-28T11:02:41;run_with_hydro_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 32.5
+2024-02-28T11:02:43;flowline_model_run_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 33.166666666666664
+2024-02-28T11:02:43;run_constant_climate_with_bias_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 33.166666666666664
+2024-02-28T11:02:43;run_with_hydro_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 33.166666666666664
+2024-02-28T11:02:44;flowline_model_run_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 33.833333333333336
+2024-02-28T11:02:44;run_constant_climate_with_bias_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 33.833333333333336
+2024-02-28T11:02:44;run_with_hydro_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 33.833333333333336
+2024-02-28T11:02:45;flowline_model_run_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 34.75
+2024-02-28T11:02:45;run_constant_climate_with_bias_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 34.75
+2024-02-28T11:02:45;run_with_hydro_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 34.75
+2024-02-28T11:02:47;flowline_model_run_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 35.75
+2024-02-28T11:02:47;run_constant_climate_with_bias_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 35.75
+2024-02-28T11:02:47;run_with_hydro_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 35.75
+2024-02-28T11:02:48;flowline_model_run_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 36.833333333333336
+2024-02-28T11:02:48;run_constant_climate_with_bias_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 36.833333333333336
+2024-02-28T11:02:48;run_with_hydro_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 36.833333333333336
+2024-02-28T11:02:49;flowline_model_run_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 38.25
+2024-02-28T11:02:49;run_constant_climate_with_bias_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 38.25
+2024-02-28T11:02:49;run_with_hydro_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 38.25
+2024-02-28T11:02:51;flowline_model_run_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 39.833333333333336
+2024-02-28T11:02:51;run_constant_climate_with_bias_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 39.833333333333336
+2024-02-28T11:02:51;run_with_hydro_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 39.833333333333336
+2024-02-28T11:02:52;flowline_model_run_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 41.833333333333336
+2024-02-28T11:02:52;run_constant_climate_with_bias_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 41.833333333333336
+2024-02-28T11:02:52;run_with_hydro_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 41.833333333333336
+2024-02-28T11:02:54;flowline_model_run_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 44.166666666666664
+2024-02-28T11:02:54;run_constant_climate_with_bias_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 44.166666666666664
+2024-02-28T11:02:54;run_with_hydro_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 44.166666666666664
+2024-02-28T11:02:56;flowline_model_run_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 47.25
+2024-02-28T11:02:56;run_constant_climate_with_bias_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 47.25
+2024-02-28T11:02:56;run_with_hydro_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 47.25
+2024-02-28T11:02:58;flowline_model_run_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 51.166666666666664
+2024-02-28T11:02:58;run_constant_climate_with_bias_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 51.166666666666664
+2024-02-28T11:02:58;run_with_hydro_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 51.166666666666664
+2024-02-28T11:03:00;flowline_model_run_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 56.416666666666664
+2024-02-28T11:03:00;run_constant_climate_with_bias_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 56.416666666666664
+2024-02-28T11:03:00;run_with_hydro_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 56.416666666666664
+2024-02-28T11:03:02;flowline_model_run_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 64.0
+2024-02-28T11:03:02;run_constant_climate_with_bias_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 64.0
+2024-02-28T11:03:02;run_with_hydro_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 64.0
+2024-02-28T11:03:04;flowline_model_run_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 75.91666666666667
+2024-02-28T11:03:04;run_constant_climate_with_bias_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 75.91666666666667
+2024-02-28T11:03:04;run_with_hydro_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 75.91666666666667
+2024-02-28T11:03:08;flowline_model_run_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 98.75
+2024-02-28T11:03:08;run_constant_climate_with_bias_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 98.75
+2024-02-28T11:03:08;run_with_hydro_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 98.75
+2024-02-28T11:03:15;flowline_model_run_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 187.66666666666666
+2024-02-28T11:03:15;run_constant_climate_with_bias_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 187.66666666666666
+2024-02-28T11:03:15;run_with_hydro_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 187.66666666666666
+2024-02-28T11:03:53;flowline_model_run_spinup;time:38.126890897750854;SUCCESS
+2024-02-28T11:03:53;run_constant_climate_with_bias_spinup;time:38.14261293411255;SUCCESS
+2024-02-28T11:04:06;run_with_hydro_spinup;time:50.61712956428528;SUCCESS
+2024-02-28T11:04:37;flowline_model_run_spinup;time:31.12153434753418;SUCCESS
+2024-02-28T11:04:37;run_constant_climate_with_bias_spinup;time:31.130154848098755;SUCCESS
+2024-02-28T11:04:49;run_with_hydro_spinup;time:43.33610725402832;SUCCESS
+2024-02-28T11:05:14;flowline_model_run_spinup;time:25.065513372421265;SUCCESS
+2024-02-28T11:05:14;run_constant_climate_with_bias_spinup;time:25.074185609817505;SUCCESS
+2024-02-28T11:05:26;run_with_hydro_spinup;time:37.34229373931885;SUCCESS
+2024-02-28T11:05:45;flowline_model_run_spinup;time:18.936397075653076;SUCCESS
+2024-02-28T11:05:45;run_constant_climate_with_bias_spinup;time:18.95112919807434;SUCCESS
+2024-02-28T11:05:58;run_with_hydro_spinup;time:31.183792114257812;SUCCESS
+2024-02-28T11:06:00;flowline_model_run_spinup;time:2.0419538021087646;SUCCESS
+2024-02-28T11:06:00;run_constant_climate_with_bias_spinup;time:2.0497732162475586;SUCCESS
+2024-02-28T11:06:12;run_with_hydro_spinup;time:14.337558507919312;SUCCESS
+2024-02-28T11:06:14;flowline_model_run_spinup;time:2.0557632446289062;SUCCESS
+2024-02-28T11:06:14;run_constant_climate_with_bias_spinup;time:2.0658719539642334;SUCCESS
+2024-02-28T11:06:26;run_with_hydro_spinup;time:14.26226258277893;SUCCESS
+2024-02-28T11:06:28;flowline_model_run_spinup;time:2.0418455600738525;SUCCESS
+2024-02-28T11:06:28;run_constant_climate_with_bias_spinup;time:2.049536943435669;SUCCESS
+2024-02-28T11:06:41;run_with_hydro_spinup;time:14.340750694274902;SUCCESS
+2024-02-28T11:54:35;flowline_model_run_spinup;time:3.888364791870117;SUCCESS
+2024-02-28T11:54:35;run_constant_climate_with_bias_spinup;time:3.8994007110595703;SUCCESS
+2024-02-28T11:55:00;run_with_hydro_spinup;time:28.41159224510193;SUCCESS
+2024-02-28T12:06:59;flowline_model_run_oversh_temp;time:8.037657737731934;SUCCESS
+2024-02-28T12:06:59;run_constant_climate_with_bias_oversh_temp;time:8.083163738250732;SUCCESS
+2024-02-28T12:07:51;run_with_hydro_oversh_temp;time:59.968466997146606;SUCCESS
+2024-02-28T12:07:59;flowline_model_run_lin_temp;time:8.032422065734863;SUCCESS
+2024-02-28T12:07:59;run_constant_climate_with_bias_lin_temp;time:8.084535598754883;SUCCESS
+2024-02-28T12:08:51;run_with_hydro_lin_temp;time:60.12233066558838;SUCCESS
+2024-02-28T12:08:59;flowline_model_run_step_temp;time:7.583668947219849;SUCCESS
+2024-02-28T12:08:59;run_constant_climate_with_bias_step_temp;time:7.63822340965271;SUCCESS
+2024-02-28T12:09:48;run_with_hydro_step_temp;time:56.465325355529785;SUCCESS
+2024-03-05T10:14:46;flowline_model_run_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 31.333333333333332
+2024-03-05T10:14:46;run_constant_climate_with_bias_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 31.333333333333332
+2024-03-05T10:14:46;run_with_hydro_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 31.333333333333332
+2024-03-05T10:14:47;flowline_model_run_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 31.583333333333332
+2024-03-05T10:14:47;run_constant_climate_with_bias_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 31.583333333333332
+2024-03-05T10:14:47;run_with_hydro_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 31.583333333333332
+2024-03-05T10:14:48;flowline_model_run_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 31.916666666666668
+2024-03-05T10:14:48;run_constant_climate_with_bias_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 31.916666666666668
+2024-03-05T10:14:48;run_with_hydro_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 31.916666666666668
+2024-03-05T10:14:50;flowline_model_run_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 32.166666666666664
+2024-03-05T10:14:50;run_constant_climate_with_bias_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 32.166666666666664
+2024-03-05T10:14:50;run_with_hydro_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 32.166666666666664
+2024-03-05T10:14:51;flowline_model_run_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 32.5
+2024-03-05T10:14:51;run_constant_climate_with_bias_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 32.5
+2024-03-05T10:14:51;run_with_hydro_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 32.5
+2024-03-05T10:14:52;flowline_model_run_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 32.75
+2024-03-05T10:14:52;run_constant_climate_with_bias_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 32.75
+2024-03-05T10:14:52;run_with_hydro_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 32.75
+2024-03-05T10:14:53;flowline_model_run_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 33.166666666666664
+2024-03-05T10:14:53;run_constant_climate_with_bias_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 33.166666666666664
+2024-03-05T10:14:53;run_with_hydro_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 33.166666666666664
+2024-03-05T10:14:55;flowline_model_run_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 33.5
+2024-03-05T10:14:55;run_constant_climate_with_bias_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 33.5
+2024-03-05T10:14:55;run_with_hydro_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 33.5
+2024-03-05T10:14:56;flowline_model_run_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 33.833333333333336
+2024-03-05T10:14:56;run_constant_climate_with_bias_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 33.833333333333336
+2024-03-05T10:14:56;run_with_hydro_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 33.833333333333336
+2024-03-05T10:14:57;flowline_model_run_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 34.25
+2024-03-05T10:14:57;run_constant_climate_with_bias_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 34.25
+2024-03-05T10:14:57;run_with_hydro_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 34.25
+2024-03-05T10:14:58;flowline_model_run_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 34.75
+2024-03-05T10:14:58;run_constant_climate_with_bias_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 34.75
+2024-03-05T10:14:58;run_with_hydro_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 34.75
+2024-03-05T10:15:00;flowline_model_run_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 35.166666666666664
+2024-03-05T10:15:00;run_constant_climate_with_bias_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 35.166666666666664
+2024-03-05T10:15:00;run_with_hydro_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 35.166666666666664
+2024-03-05T10:15:01;flowline_model_run_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 35.75
+2024-03-05T10:15:01;run_constant_climate_with_bias_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 35.75
+2024-03-05T10:15:01;run_with_hydro_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 35.75
+2024-03-05T10:15:02;flowline_model_run_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 36.25
+2024-03-05T10:15:02;run_constant_climate_with_bias_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 36.25
+2024-03-05T10:15:02;run_with_hydro_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 36.25
+2024-03-05T10:15:04;flowline_model_run_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 36.833333333333336
+2024-03-05T10:15:04;run_constant_climate_with_bias_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 36.833333333333336
+2024-03-05T10:15:04;run_with_hydro_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 36.833333333333336
+2024-03-05T10:15:05;flowline_model_run_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 37.5
+2024-03-05T10:15:05;run_constant_climate_with_bias_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 37.5
+2024-03-05T10:15:05;run_with_hydro_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 37.5
+2024-03-05T10:15:07;flowline_model_run_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 38.25
+2024-03-05T10:15:07;run_constant_climate_with_bias_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 38.25
+2024-03-05T10:15:07;run_with_hydro_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 38.25
+2024-03-05T10:15:08;flowline_model_run_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 39.0
+2024-03-05T10:15:08;run_constant_climate_with_bias_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 39.0
+2024-03-05T10:15:08;run_with_hydro_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 39.0
+2024-03-05T10:15:10;flowline_model_run_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 39.833333333333336
+2024-03-05T10:15:10;run_constant_climate_with_bias_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 39.833333333333336
+2024-03-05T10:15:10;run_with_hydro_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 39.833333333333336
+2024-03-05T10:15:11;flowline_model_run_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 40.75
+2024-03-05T10:15:11;run_constant_climate_with_bias_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 40.75
+2024-03-05T10:15:11;run_with_hydro_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 40.75
+2024-03-05T10:15:13;flowline_model_run_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 41.833333333333336
+2024-03-05T10:15:13;run_constant_climate_with_bias_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 41.833333333333336
+2024-03-05T10:15:13;run_with_hydro_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 41.833333333333336
+2024-03-05T10:15:14;flowline_model_run_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 42.916666666666664
+2024-03-05T10:15:14;run_constant_climate_with_bias_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 42.916666666666664
+2024-03-05T10:15:14;run_with_hydro_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 42.916666666666664
+2024-03-05T10:15:16;flowline_model_run_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 44.166666666666664
+2024-03-05T10:15:16;run_constant_climate_with_bias_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 44.166666666666664
+2024-03-05T10:15:16;run_with_hydro_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 44.166666666666664
+2024-03-05T10:15:18;flowline_model_run_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 45.583333333333336
+2024-03-05T10:15:18;run_constant_climate_with_bias_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 45.583333333333336
+2024-03-05T10:15:18;run_with_hydro_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 45.583333333333336
+2024-03-05T10:15:19;flowline_model_run_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 47.25
+2024-03-05T10:15:19;run_constant_climate_with_bias_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 47.25
+2024-03-05T10:15:19;run_with_hydro_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 47.25
+2024-03-05T10:15:21;flowline_model_run_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 49.083333333333336
+2024-03-05T10:15:21;run_constant_climate_with_bias_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 49.083333333333336
+2024-03-05T10:15:21;run_with_hydro_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 49.083333333333336
+2024-03-05T10:15:23;flowline_model_run_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 51.166666666666664
+2024-03-05T10:15:23;run_constant_climate_with_bias_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 51.166666666666664
+2024-03-05T10:15:23;run_with_hydro_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 51.166666666666664
+2024-03-05T10:15:25;flowline_model_run_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 53.583333333333336
+2024-03-05T10:15:25;run_constant_climate_with_bias_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 53.583333333333336
+2024-03-05T10:15:25;run_with_hydro_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 53.583333333333336
+2024-03-05T10:15:27;flowline_model_run_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 56.416666666666664
+2024-03-05T10:15:27;run_constant_climate_with_bias_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 56.416666666666664
+2024-03-05T10:15:27;run_with_hydro_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 56.416666666666664
+2024-03-05T10:15:29;flowline_model_run_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 59.833333333333336
+2024-03-05T10:15:29;run_constant_climate_with_bias_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 59.833333333333336
+2024-03-05T10:15:29;run_with_hydro_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 59.833333333333336
+2024-03-05T10:15:32;flowline_model_run_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 64.0
+2024-03-05T10:15:32;run_constant_climate_with_bias_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 64.0
+2024-03-05T10:15:32;run_with_hydro_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 64.0
+2024-03-05T10:15:34;flowline_model_run_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 69.16666666666667
+2024-03-05T10:15:34;run_constant_climate_with_bias_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 69.16666666666667
+2024-03-05T10:15:34;run_with_hydro_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 69.16666666666667
+2024-03-05T10:15:37;flowline_model_run_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 75.91666666666667
+2024-03-05T10:15:37;run_constant_climate_with_bias_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 75.91666666666667
+2024-03-05T10:15:37;run_with_hydro_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 75.91666666666667
+2024-03-05T10:15:40;flowline_model_run_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 85.08333333333333
+2024-03-05T10:15:40;run_constant_climate_with_bias_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 85.08333333333333
+2024-03-05T10:15:40;run_with_hydro_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 85.08333333333333
+2024-03-05T10:15:43;flowline_model_run_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 98.75
+2024-03-05T10:15:43;run_constant_climate_with_bias_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 98.75
+2024-03-05T10:15:43;run_with_hydro_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 98.75
+2024-03-05T10:15:48;flowline_model_run_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 122.25
+2024-03-05T10:15:48;run_constant_climate_with_bias_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 122.25
+2024-03-05T10:15:48;run_with_hydro_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 122.25
+2024-03-05T10:15:55;flowline_model_run_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 187.66666666666666
+2024-03-05T10:15:55;run_constant_climate_with_bias_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 187.66666666666666
+2024-03-05T10:15:55;run_with_hydro_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 187.66666666666666
+2024-03-05T10:17:23;flowline_model_run_spinup;time:88.06423926353455;SUCCESS
+2024-03-05T10:17:23;run_constant_climate_with_bias_spinup;time:88.07612538337708;SUCCESS
+2024-03-05T10:17:48;run_with_hydro_spinup;time:113.11136150360107;SUCCESS
+2024-03-05T10:19:08;flowline_model_run_spinup;time:79.56802916526794;SUCCESS
+2024-03-05T10:19:08;run_constant_climate_with_bias_spinup;time:79.5774712562561;SUCCESS
+2024-03-05T10:19:33;run_with_hydro_spinup;time:104.49875068664551;SUCCESS
+2024-03-05T10:20:42;flowline_model_run_spinup;time:68.87984561920166;SUCCESS
+2024-03-05T10:20:42;run_constant_climate_with_bias_spinup;time:68.88839554786682;SUCCESS
+2024-03-05T10:21:07;run_with_hydro_spinup;time:93.81039524078369;SUCCESS
+2024-03-05T10:22:11;flowline_model_run_spinup;time:64.09054613113403;SUCCESS
+2024-03-05T10:22:11;run_constant_climate_with_bias_spinup;time:64.1003053188324;SUCCESS
+2024-03-05T10:22:36;run_with_hydro_spinup;time:89.00737357139587;SUCCESS
+2024-03-05T10:23:33;flowline_model_run_spinup;time:56.99143838882446;SUCCESS
+2024-03-05T10:23:33;run_constant_climate_with_bias_spinup;time:57.00018668174744;SUCCESS
+2024-03-05T10:23:58;run_with_hydro_spinup;time:81.84075999259949;SUCCESS
+2024-03-05T10:24:50;flowline_model_run_spinup;time:52.189921379089355;SUCCESS
+2024-03-05T10:24:50;run_constant_climate_with_bias_spinup;time:52.200419187545776;SUCCESS
+2024-03-05T10:25:15;run_with_hydro_spinup;time:77.0321204662323;SUCCESS
+2024-03-05T10:26:02;flowline_model_run_spinup;time:47.246970891952515;SUCCESS
+2024-03-05T10:26:02;run_constant_climate_with_bias_spinup;time:47.25566244125366;SUCCESS
+2024-03-05T10:26:27;run_with_hydro_spinup;time:72.13283348083496;SUCCESS
+2024-03-05T10:27:06;flowline_model_run_spinup;time:39.68323087692261;SUCCESS
+2024-03-05T10:27:06;run_constant_climate_with_bias_spinup;time:39.692262411117554;SUCCESS
+2024-03-05T10:27:32;run_with_hydro_spinup;time:64.78541731834412;SUCCESS
+2024-03-05T10:28:04;flowline_model_run_spinup;time:32.08841323852539;SUCCESS
+2024-03-05T10:28:04;run_constant_climate_with_bias_spinup;time:32.096731662750244;SUCCESS
+2024-03-05T10:28:29;run_with_hydro_spinup;time:56.997719287872314;SUCCESS
+2024-03-05T10:28:33;flowline_model_run_spinup;time:3.9771840572357178;SUCCESS
+2024-03-05T10:28:33;run_constant_climate_with_bias_spinup;time:3.9855527877807617;SUCCESS
+2024-03-05T10:28:58;run_with_hydro_spinup;time:29.11335253715515;SUCCESS
+2024-03-05T10:29:02;flowline_model_run_spinup;time:3.9909698963165283;SUCCESS
+2024-03-05T10:29:02;run_constant_climate_with_bias_spinup;time:3.999408483505249;SUCCESS
+2024-03-05T10:29:27;run_with_hydro_spinup;time:29.06583285331726;SUCCESS
+2024-03-05T10:29:31;flowline_model_run_spinup;time:3.9517159461975098;SUCCESS
+2024-03-05T10:29:31;run_constant_climate_with_bias_spinup;time:3.9596898555755615;SUCCESS
+2024-03-05T10:29:56;run_with_hydro_spinup;time:28.886670351028442;SUCCESS
+2024-03-05T10:30:00;flowline_model_run_spinup;time:3.958340883255005;SUCCESS
+2024-03-05T10:30:00;run_constant_climate_with_bias_spinup;time:3.968658208847046;SUCCESS
+2024-03-05T10:30:25;run_with_hydro_spinup;time:28.915191888809204;SUCCESS
+2024-03-05T10:30:29;flowline_model_run_spinup;time:3.974487543106079;SUCCESS
+2024-03-05T10:30:29;run_constant_climate_with_bias_spinup;time:3.983059883117676;SUCCESS
+2024-03-05T10:30:54;run_with_hydro_spinup;time:28.879440546035767;SUCCESS
+2024-03-05T10:30:58;flowline_model_run_spinup;time:4.164597272872925;SUCCESS
+2024-03-05T10:30:58;run_constant_climate_with_bias_spinup;time:4.1726789474487305;SUCCESS
+2024-03-05T10:31:23;run_with_hydro_spinup;time:29.373714208602905;SUCCESS
+2024-03-05T12:48:27;flowline_model_run_spinup;time:3.9764513969421387;SUCCESS
+2024-03-05T12:48:27;run_constant_climate_with_bias_spinup;time:3.9920501708984375;SUCCESS
+2024-03-05T12:48:52;run_with_hydro_spinup;time:28.93648624420166;SUCCESS
+2024-03-05T13:12:04;flowline_model_run_oversh_temp;time:8.145201921463013;SUCCESS
+2024-03-05T13:12:04;run_constant_climate_with_bias_oversh_temp;time:8.191319227218628;SUCCESS
+2024-03-05T13:12:57;run_with_hydro_oversh_temp;time:61.081767320632935;SUCCESS
+2024-03-05T13:13:05;flowline_model_run_lin_temp;time:8.195749521255493;SUCCESS
+2024-03-05T13:13:05;run_constant_climate_with_bias_lin_temp;time:8.250672340393066;SUCCESS
+2024-03-05T13:13:58;run_with_hydro_lin_temp;time:61.42974328994751;SUCCESS
+2024-03-05T13:14:06;flowline_model_run_step_temp;time:7.725186586380005;SUCCESS
+2024-03-05T13:14:06;run_constant_climate_with_bias_step_temp;time:7.802021026611328;SUCCESS
+2024-03-05T13:14:56;run_with_hydro_step_temp;time:57.62549042701721;SUCCESS
+2024-05-14T12:03:17;flowline_model_run_oversh_temp;time:7.950860023498535;SUCCESS
+2024-05-14T12:03:17;run_constant_climate_with_bias_oversh_temp;time:8.046290397644043;SUCCESS
+2024-05-14T12:04:08;run_with_hydro_oversh_temp;time:59.5032422542572;SUCCESS
+2024-05-14T12:04:16;flowline_model_run_lin_temp;time:7.953211545944214;SUCCESS
+2024-05-14T12:04:16;run_constant_climate_with_bias_lin_temp;time:8.015413999557495;SUCCESS
+2024-05-14T12:05:07;run_with_hydro_lin_temp;time:59.379194021224976;SUCCESS
+2024-05-14T12:05:15;flowline_model_run_step_temp;time:7.5089499950408936;SUCCESS
+2024-05-14T12:05:15;run_constant_climate_with_bias_step_temp;time:7.560559988021851;SUCCESS
+2024-05-14T12:06:03;run_with_hydro_step_temp;time:55.960089921951294;SUCCESS

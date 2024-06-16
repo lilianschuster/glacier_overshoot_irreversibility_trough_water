@@ -1,0 +1,117 @@
+2023-03-02T19:44:59;glacier_statistics;time:0.5435826778411865;SUCCESS
+2023-03-02T19:53:25;define_glacier_region;time:5.387072563171387;SUCCESS
+2023-03-02T19:55:50;glacier_statistics;time:0.5448875427246094;SUCCESS
+2023-03-02T19:57:12;process_dem;time:0.24825549125671387;SUCCESS
+2023-03-02T19:57:13;simple_glacier_masks;time:1.1339211463928223;SUCCESS
+2023-03-02T19:57:31;elevation_band_flowline;time:0.09178686141967773;SUCCESS
+2023-03-02T19:58:25;fixed_dx_elevation_band_flowline;time:0.564708948135376;SUCCESS
+2023-03-02T20:00:35;compute_downstream_line;time:16.4267418384552;SUCCESS
+2023-03-02T20:06:48;compute_downstream_bedshape;time:5.731826543807983;SUCCESS
+2023-03-02T20:09:07;glacier_statistics;time:0.607189416885376;SUCCESS
+2023-05-24T15:21:31;process_gswp3_w5e5_data;time:0.15059256553649902;SUCCESS
+2023-05-24T15:21:31;process_climate_data;time:0.15082693099975586;SUCCESS
+2023-05-24T15:36:21;mb_calibration_from_scalar_mb;time:0.013013839721679688;SUCCESS
+2023-05-24T15:36:21;mb_calibration_from_geodetic_mb;time:2.722151279449463;SUCCESS
+2023-05-24T15:39:18;apparent_mb_from_any_mb;time:0.01734781265258789;SUCCESS
+2023-05-24T15:39:20;prepare_for_inversion;time:0.001462697982788086;SUCCESS
+2023-05-24T15:39:21;mass_conservation_inversion;time:0.0068204402923583984;SUCCESS
+2023-05-24T15:39:21;filter_inversion_output;time:0.0011763572692871094;SUCCESS
+2023-05-24T15:39:22;get_inversion_volume;time:0.0001747608184814453;SUCCESS
+2023-05-24T15:39:22;prepare_for_inversion;time:0.0015184879302978516;SUCCESS
+2023-05-24T15:39:23;mass_conservation_inversion;time:0.006903648376464844;SUCCESS
+2023-05-24T15:39:24;filter_inversion_output;time:0.0010352134704589844;SUCCESS
+2023-05-24T15:39:24;get_inversion_volume;time:0.0001609325408935547;SUCCESS
+2023-05-24T15:39:25;prepare_for_inversion;time:0.0015540122985839844;SUCCESS
+2023-05-24T15:39:25;mass_conservation_inversion;time:0.006678342819213867;SUCCESS
+2023-05-24T15:39:26;filter_inversion_output;time:0.0010876655578613281;SUCCESS
+2023-05-24T15:39:26;get_inversion_volume;time:0.00016188621520996094;SUCCESS
+2023-05-24T15:39:27;prepare_for_inversion;time:0.0014081001281738281;SUCCESS
+2023-05-24T15:39:28;mass_conservation_inversion;time:0.006951570510864258;SUCCESS
+2023-05-24T15:39:28;filter_inversion_output;time:0.0008485317230224609;SUCCESS
+2023-05-24T15:39:29;get_inversion_volume;time:0.00020599365234375;SUCCESS
+2023-05-24T15:39:29;prepare_for_inversion;time:0.0014085769653320312;SUCCESS
+2023-05-24T15:39:30;mass_conservation_inversion;time:0.0067174434661865234;SUCCESS
+2023-05-24T15:39:30;filter_inversion_output;time:0.0010516643524169922;SUCCESS
+2023-05-24T15:39:31;get_inversion_volume;time:0.00022530555725097656;SUCCESS
+2023-05-24T15:39:31;prepare_for_inversion;time:0.0015027523040771484;SUCCESS
+2023-05-24T15:39:32;mass_conservation_inversion;time:0.00675654411315918;SUCCESS
+2023-05-24T15:39:33;filter_inversion_output;time:0.0010342597961425781;SUCCESS
+2023-05-24T15:39:33;get_inversion_volume;time:0.0001614093780517578;SUCCESS
+2023-05-24T15:39:34;prepare_for_inversion;time:0.0012326240539550781;SUCCESS
+2023-05-24T15:39:34;mass_conservation_inversion;time:0.006581544876098633;SUCCESS
+2023-05-24T15:39:35;filter_inversion_output;time:0.0011339187622070312;SUCCESS
+2023-05-24T15:39:35;get_inversion_volume;time:0.0001659393310546875;SUCCESS
+2023-05-24T15:39:36;prepare_for_inversion;time:0.0014696121215820312;SUCCESS
+2023-05-24T15:39:37;mass_conservation_inversion;time:0.0066492557525634766;SUCCESS
+2023-05-24T15:39:37;filter_inversion_output;time:0.001119852066040039;SUCCESS
+2023-05-24T15:39:38;get_inversion_volume;time:0.0001659393310546875;SUCCESS
+2023-05-24T15:39:38;prepare_for_inversion;time:0.001668691635131836;SUCCESS
+2023-05-24T15:39:39;mass_conservation_inversion;time:0.006546974182128906;SUCCESS
+2023-05-24T15:39:40;filter_inversion_output;time:0.0010955333709716797;SUCCESS
+2023-05-24T15:39:40;get_inversion_volume;time:0.00018095970153808594;SUCCESS
+2023-05-24T15:39:41;prepare_for_inversion;time:0.0014810562133789062;SUCCESS
+2023-05-24T15:39:41;mass_conservation_inversion;time:0.006238460540771484;SUCCESS
+2023-05-24T15:39:42;filter_inversion_output;time:0.0009355545043945312;SUCCESS
+2023-05-24T15:39:42;get_inversion_volume;time:0.00016450881958007812;SUCCESS
+2023-05-24T15:39:47;init_present_time_glacier;time:0.032683372497558594;SUCCESS
+2023-05-24T15:41:25;glacier_statistics;time:0.5384213924407959;SUCCESS
+2023-05-24T15:43:27;climate_statistics;time:0.5548141002655029;SUCCESS
+2023-05-24T15:43:54;fixed_geometry_mass_balance;time:0.03161048889160156;SUCCESS
+2023-08-15T19:59:00;flowline_model_run_historical;time:0.190751314163208;SUCCESS
+2023-08-15T19:59:00;run_from_climate_data_historical;time:0.20240044593811035;SUCCESS
+2023-08-15T20:25:25;run_dynamic_melt_f_calibration_spinup_historical;time:3.2145650386810303;SUCCESS
+2023-08-15T20:33:18;glacier_statistics;time:0.6044249534606934;SUCCESS
+2024-02-28T16:51:08;flowline_model_run_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 1611.75
+2024-02-28T16:51:08;run_constant_climate_with_bias_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 1611.75
+2024-02-28T16:51:08;run_with_hydro_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 1611.75
+2024-02-28T16:51:20;flowline_model_run_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 1673.75
+2024-02-28T16:51:20;run_constant_climate_with_bias_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 1673.75
+2024-02-28T16:51:20;run_with_hydro_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 1673.75
+2024-02-28T16:51:33;flowline_model_run_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 1750.9166666666667
+2024-02-28T16:51:33;run_constant_climate_with_bias_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 1750.9166666666667
+2024-02-28T16:51:33;run_with_hydro_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 1750.9166666666667
+2024-02-28T16:51:46;flowline_model_run_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 1852.0833333333333
+2024-02-28T16:51:46;run_constant_climate_with_bias_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 1852.0833333333333
+2024-02-28T16:51:46;run_with_hydro_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 1852.0833333333333
+2024-02-28T16:52:00;flowline_model_run_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 1997.5
+2024-02-28T16:52:00;run_constant_climate_with_bias_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 1997.5
+2024-02-28T16:52:00;run_with_hydro_spinup;RuntimeError: Glacier exceeds domain boundaries, at year: 1997.5
+2024-02-28T16:52:08;flowline_model_run_spinup;time:8.412489891052246;SUCCESS
+2024-02-28T16:52:08;run_constant_climate_with_bias_spinup;time:8.422333478927612;SUCCESS
+2024-02-28T16:52:35;run_with_hydro_spinup;time:34.90192461013794;SUCCESS
+2024-02-28T16:52:39;flowline_model_run_spinup;time:4.719577789306641;SUCCESS
+2024-02-28T16:52:39;run_constant_climate_with_bias_spinup;time:4.729380369186401;SUCCESS
+2024-02-28T16:53:06;run_with_hydro_spinup;time:31.150126934051514;SUCCESS
+2024-02-28T16:53:10;flowline_model_run_spinup;time:4.729037523269653;SUCCESS
+2024-02-28T16:53:10;run_constant_climate_with_bias_spinup;time:4.738856315612793;SUCCESS
+2024-02-28T16:53:37;run_with_hydro_spinup;time:31.19559073448181;SUCCESS
+2024-02-28T16:53:42;flowline_model_run_spinup;time:4.719118118286133;SUCCESS
+2024-02-28T16:53:42;run_constant_climate_with_bias_spinup;time:4.729584693908691;SUCCESS
+2024-02-28T16:54:08;run_with_hydro_spinup;time:31.091035842895508;SUCCESS
+2024-02-28T16:54:13;flowline_model_run_spinup;time:4.67462944984436;SUCCESS
+2024-02-28T16:54:13;run_constant_climate_with_bias_spinup;time:4.6823813915252686;SUCCESS
+2024-02-28T16:54:39;run_with_hydro_spinup;time:31.197418451309204;SUCCESS
+2024-02-28T16:56:35;flowline_model_run_spinup;time:4.700963020324707;SUCCESS
+2024-02-28T16:56:35;run_constant_climate_with_bias_spinup;time:4.711542844772339;SUCCESS
+2024-02-28T16:57:02;run_with_hydro_spinup;time:31.10694432258606;SUCCESS
+2024-02-28T17:07:19;flowline_model_run_oversh_temp;time:9.581979513168335;SUCCESS
+2024-02-28T17:07:19;run_constant_climate_with_bias_oversh_temp;time:9.665206670761108;SUCCESS
+2024-02-28T17:08:15;run_with_hydro_oversh_temp;time:65.64184737205505;SUCCESS
+2024-02-28T17:08:25;flowline_model_run_lin_temp;time:9.592277526855469;SUCCESS
+2024-02-28T17:08:25;run_constant_climate_with_bias_lin_temp;time:9.675540924072266;SUCCESS
+2024-02-28T17:09:22;run_with_hydro_lin_temp;time:66.06603002548218;SUCCESS
+2024-02-28T17:09:31;flowline_model_run_step_temp;time:9.148096084594727;SUCCESS
+2024-02-28T17:09:31;run_constant_climate_with_bias_step_temp;time:9.245962381362915;SUCCESS
+2024-02-28T17:10:24;run_with_hydro_step_temp;time:62.16583847999573;SUCCESS
+2024-03-05T12:53:41;flowline_model_run_spinup;time:4.787918567657471;SUCCESS
+2024-03-05T12:53:41;run_constant_climate_with_bias_spinup;time:4.806175470352173;SUCCESS
+2024-03-05T12:54:08;run_with_hydro_spinup;time:31.97290849685669;SUCCESS
+2024-05-14T12:31:28;flowline_model_run_oversh_temp;time:9.523786783218384;SUCCESS
+2024-05-14T12:31:28;run_constant_climate_with_bias_oversh_temp;time:9.670722723007202;SUCCESS
+2024-05-14T12:32:24;run_with_hydro_oversh_temp;time:65.12070035934448;SUCCESS
+2024-05-14T12:32:33;flowline_model_run_lin_temp;time:9.527893304824829;SUCCESS
+2024-05-14T12:32:33;run_constant_climate_with_bias_lin_temp;time:9.617434740066528;SUCCESS
+2024-05-14T12:33:29;run_with_hydro_lin_temp;time:65.00099062919617;SUCCESS
+2024-05-14T12:33:38;flowline_model_run_step_temp;time:9.119652032852173;SUCCESS
+2024-05-14T12:33:38;run_constant_climate_with_bias_step_temp;time:9.210362434387207;SUCCESS
+2024-05-14T12:34:30;run_with_hydro_step_temp;time:61.47842502593994;SUCCESS
