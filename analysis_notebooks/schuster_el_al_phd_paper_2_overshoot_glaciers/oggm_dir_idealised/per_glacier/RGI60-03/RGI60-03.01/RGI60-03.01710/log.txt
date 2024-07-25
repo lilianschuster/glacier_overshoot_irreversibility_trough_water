@@ -262,3 +262,9 @@
 2024-07-02T17:35:48;flowline_model_run_lin_temp;time:9.596131563186646;SUCCESS
 2024-07-02T17:35:48;run_constant_climate_with_bias_lin_temp;time:9.670170307159424;SUCCESS
 2024-07-02T17:36:42;run_with_hydro_lin_temp;time:63.44740581512451;SUCCESS
+2024-07-24T12:54:33;flowline_model_run_oversh_temp;time:9.44460678100586;SUCCESS
+2024-07-24T12:54:33;run_constant_climate_with_bias_oversh_temp;time:9.659401178359985;SUCCESS
+2024-07-24T12:55:28;run_with_hydro_oversh_temp;time:64.50062608718872;SUCCESS
+2024-07-24T12:55:38;flowline_model_run_lin_temp;time:9.379876375198364;SUCCESS
+2024-07-24T12:55:38;run_constant_climate_with_bias_lin_temp;time:9.46258544921875;SUCCESS
+2024-07-24T12:56:31;run_with_hydro_lin_temp;time:62.898192167282104;SUCCESS

@@ -31,14 +31,16 @@
 - `2_fig_2_suppl_prcp.ipynb`
     - creates fig 2 (+ variants of it ...)
     - creates suppl. fig. with global prcp. evolution 
-
+    - also creates suppl. figure with individual RGI regions for suppl. informations: 
+        - 2_rgi_reg_volume_changes_overshoot{a}_{bc}_portrait_4cols.pdf (+ variants...)
+        - --> probably I lost here the script to plot the 2_rgi_reg_runoff_51yr_avg_changes_overshoot plots ... (probably lost it on Feb 11...)
 - `2x_volume_timeseries_clustering_map_rgi_region_new.ipynb`
     - creates Fig. 3
     - also creates potential suppl. figure with clustering from volume estimates (FIg.3) but showing the runoff evolution instead of volume evolution
-    - also creates suppl. figure with individual RGI regions for suppl. informations: 
-        - 2_rgi_reg_volume_changes_overshoot{a}_{bc}_portrait_4cols.pdf (+ variants...)
+
     - also does some additional analysis (some of it is old)
-    - --> probably I lost here the script to plot the 2_rgi_reg_runoff_51yr_avg_changes_overshoot plots ... (probably lost it on Feb 11...)
+    
+    - also creates fig. 4 part a (but somehow this is an old version 
 
 ## runoff ESM notebooks 
 - `3x_check_runoff_glacierized_area_overshoot.ipynb`
