@@ -1,8 +1,5 @@
 # Overview over analysis notebooks
 
-*Todo: need to work on 4_***
--> which notebook computes the *2_rgi_reg_runoff_*.png files*???
---> it seems like it got accidentally removed ??? 
 
 ## extract aggregated projection files or further climate datasets... 
 
@@ -16,14 +13,13 @@
         - creates `common_running_sum_all_basins_oversh_stab_2000_2500.nc`
 
 ## 1. Idealised/Conceptual model notebooks
-- the correct ones are mostly on Lily's computer as xkcd does not work on cluster
-    - todo -> move the final one here!!!
-
-- `1_WRONG_idealised_conceptual_overshoot_reponse.ipynb`
 
 - `1_idealised_suppl_comparison.ipynb`
-    - potential suppl. figure of conceptual approach ... 
-        - creates figures/suppl_fig_idealised_1000.png (+ variants of it)
+    - > all currently used idealised experiment figures are shown here
+- externally on Lily's laptop as xkcd does not workk on cluster:
+    - older variants (including those with xkcd) are on the laptop: 
+    - Schreibtisch/PhD/phd_paper_2_overshoot_glaciers/idealised_conceptual_overshoot_reponse_v2024-06.ipynb
+    
         
         
 ## volume ESM notebooks
@@ -33,25 +29,27 @@
     - creates suppl. fig. with global prcp. evolution 
     - also creates suppl. figure with individual RGI regions for suppl. informations: 
         - 2_rgi_reg_volume_changes_overshoot{a}_{bc}_portrait_4cols.pdf (+ variants...)
-        - --> probably I lost here the script to plot the 2_rgi_reg_runoff_51yr_avg_changes_overshoot plots ... (probably lost it on Feb 11...)
 - `2x_volume_timeseries_clustering_map_rgi_region_new.ipynb`
     - creates Fig. 3
     - also creates potential suppl. figure with clustering from volume estimates (FIg.3) but showing the runoff evolution instead of volume evolution
-
     - also does some additional analysis (some of it is old)
     
-    - also creates fig. 4 part a (but somehow this is an old version 
-
 ## runoff ESM notebooks 
 - `3x_check_runoff_glacierized_area_overshoot.ipynb`
     - checks the issue of glacierized area temporal changes --> just important to mention in discussion somewhere.. 
    
 
-- `3_runoff_timeseries_basins.ipynb`
-    - creates fig. 4 
-    - creates suppl. figures of basin analysis
+- `3_basin_stats.ipynb`
+    - does some basin statistic analysis mentioned in the manuscript 
+    - creates suppl. figures of basin analysis (and annual and melt water runoff)
     - also creates suppl. plot with prcp seasonality    
+    - creates files to later create Fig. 4 (but Fig. 4 is created in other notebook)
+ 
+ - `3_fig4.ipynb`
+     - creates Fig. 4 
 
+- `4_runoff_RGIregions.ipynb`
+    - creates suppl. figure with regional glacier runoff ... and precipitation 
 
 ## additional analysis that is maybe more for the discussion... 
 - `4_steady_state_glacier_tipping_points`
