@@ -4,15 +4,12 @@
 
 *.nc
 *.csv
+*hidden*
 *.out
-/home/www/lschuster/provide/gfdl-esm2m_oversh_stab_uni_bern/analysis_notebooks/schuster_el_al_phd_paper_2_overshoot_glaciers/data_from_others/
-/home/www/lschuster/provide/gfdl-esm2m_oversh_stab_uni_bern/analysis_notebooks/schuster_el_al_phd_paper_2_overshoot_glaciers/oggm_dir_idealised/
-/home/www/lschuster/provide/gfdl-esm2m_oversh_stab_uni_bern/oversh_T20OS15/
-/home/www/lschuster/provide/gfdl-esm2m_oversh_stab_uni_bern/stab_T12/
-/home/www/lschuster/provide/gfdl-esm2m_oversh_stab_uni_bern/stab_T15/
-/home/www/lschuster/provide/gfdl-esm2m_oversh_stab_uni_bern/stab_T20/
-/home/www/lschuster/provide/gfdl-esm2m_oversh_stab_uni_bern/stab_T25/
-/home/www/lschuster/provide/gfdl-esm2m_oversh_stab_uni_bern/stab_T30/
-/home/www/lschuster/provide/gfdl-esm2m_oversh_stab_uni_bern/oversh_T25OS15/
-/home/www/lschuster/provide/gfdl-esm2m_oversh_stab_uni_bern/oversh_T30OS15/
-/home/www/lschuster/provide/gfdl-esm2m_oversh_stab_uni_bern/old_2024-03/
+/home/www/lschuster/provide/gfdl-esm2m_oversh_stab_uni_bern/analysis_notebooks/
+/home/www/lschuster/provide/gfdl-esm2m_oversh_stab_uni_bern/runs/
+/home/www/lschuster/provide/gfdl-esm2m_oversh_stab_uni_bern/data/
+/home/www/lschuster/provide/gfdl-esm2m_oversh_stab_uni_bern/figures/
+/home/www/lschuster/provide/gfdl-esm2m_oversh_stab_uni_bern/flattened_gfdl_esm2m/
+/home/www/lschuster/provide/gfdl-esm2m_oversh_stab_uni_bern/gfdl_esm2m/
+/home/www/lschuster/provide/gfdl-esm2m_oversh_stab_uni_bern/old/

@@ -180,8 +180,8 @@ def run_hydro_from_2000_ref_area_2000_hist_w5e5_w_overshot_stab_scenarios(gdir,
                      output_filesuffix='_historical_from_2000_run')
     if run_steady_state:
         store_monthly_hydro = False
-        prescribe_years = pd.Series(data=np.tile(np.arange(2400,2501,1),100),
-                                    index=np.arange(0,10100,1)) #np.tile(np.arange(2399,2500,1),200))
+        prescribe_years = pd.Series(data=np.tile(np.arange(2399,2500,1),100), # we only have climate data until end of 2499!!!
+                                    index=np.arange(0,10100,1)) # run for 10000 years 
     else:
         store_monthly_hydro = True
         prescribe_years = False
@@ -240,7 +240,7 @@ def run_hydro_from_2000_ref_area_2000_hist_w5e5_w_overshot_stab_scenarios(gdir,
         if run_steady_state:
             rid_steady_state = f'_gfdl-esm2m_stab_T15_endyr_2500_bc_1980_2019'
             rid_output = f'_gfdl-esm2m_stab_T15_initial_{scenario}_bc_1980_2019'
-            run_random_climate_prescribe_years(gdir, nyears=20200, # 101-year period repeat ... 
+            run_random_climate_prescribe_years(gdir, nyears=10100, # 101-year period repeat ... 
                          init_model_yr=2500,
                            climate_filename='gcm_data',
                              # use the chosen scenario

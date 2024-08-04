@@ -26,11 +26,15 @@ from func_add_2500incl import run_hydro_from_2000_ref_area_2000_hist_w5e5_w_over
 from oggm.shop.gcm_climate import process_gcm_data, process_cmip_data
 
 # will run the stabilisation scenario separately 
-run_steady_state = False
-only_stab = False
-if only_stab:
-    scenarios = ['stab_T12']
-elif run_steady_state:
+rgi_reg = str(sys.argv[1])
+steady_state = str(sys.argv[2])
+
+print(rgi_reg, steady_state)
+if steady_state == 'runs_steady_state':
+    run_steady_state = True
+else:
+    run_steady_state = False
+if run_steady_state:
     scenarios = ['stab_T15','oversh_T30OS15']
 else:
     scenarios = ['stab_T12',
@@ -69,7 +73,6 @@ if not OUTPUT_DIR:
 utils.mkdir(OUTPUT_DIR)
 
 
-rgi_reg = str(sys.argv[1])
 
 OGGM_GLACIER_JOB = os.environ.get('OGGM_GLACIER_JOB', '')
 test = False
@@ -88,6 +91,7 @@ print(id0,id1)
 # Module logger
 log = logging.getLogger(__name__)
 log.workflow(f'Starting run for RGI reg {rgi_reg}: glaciers [{id0}:{id1}]')    
+log.workflow(f'{rgi_reg}, {steady_state}')    
 
 # RGI glaciers
 rgi_ids = gpd.read_file(utils.get_rgi_region_file(rgi_reg, version=rgi_version))

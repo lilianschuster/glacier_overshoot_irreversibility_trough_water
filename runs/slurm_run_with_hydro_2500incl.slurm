@@ -69,7 +69,7 @@ srun -n 1 -c "${SLURM_JOB_CPUS_PER_NODE}" singularity exec /home/users/lschuster
   # Increase number of allowed open file descriptors
   ulimit -n 65000
   # Finally, the run
-  python 0_run_with_hydro_oversh_stab_per_rgi_reg_2500incl.py $1
+  python 0_run_with_hydro_oversh_stab_per_rgi_reg_2500incl.py $1 $2
 EOF
 
 # Write out
