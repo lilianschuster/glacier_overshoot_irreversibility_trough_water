@@ -6,10 +6,10 @@
 *.csv
 *hidden*
 *.out
-/home/www/lschuster/provide/gfdl-esm2m_oversh_stab_uni_bern/analysis_notebooks/
-/home/www/lschuster/provide/gfdl-esm2m_oversh_stab_uni_bern/runs/
-/home/www/lschuster/provide/gfdl-esm2m_oversh_stab_uni_bern/data/
-/home/www/lschuster/provide/gfdl-esm2m_oversh_stab_uni_bern/figures/
-/home/www/lschuster/provide/gfdl-esm2m_oversh_stab_uni_bern/flattened_gfdl_esm2m/
-/home/www/lschuster/provide/gfdl-esm2m_oversh_stab_uni_bern/gfdl_esm2m/
-/home/www/lschuster/provide/gfdl-esm2m_oversh_stab_uni_bern/old/
+analysis_notebooks/
+runs/
+data/
+figures/
+flattened_gfdl_esm2m/
+gfdl_esm2m/
+old/

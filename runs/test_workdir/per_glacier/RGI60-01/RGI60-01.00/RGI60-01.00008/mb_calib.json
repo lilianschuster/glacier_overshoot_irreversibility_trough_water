@@ -1,1 +1,0 @@
-{"rgi_id": "RGI60-01.00008", "bias": 0, "melt_f": 17.0, "prcp_fac": 3.058207403526175, "temp_bias": 2.4043124884982876, "reference_mb": 300.3, "reference_mb_err": 317.5, "reference_period": "2000-01-01_2020-01-01", "mb_global_params": {"temp_default_gradient": -0.0065, "temp_all_solid": 0.0, "temp_all_liq": 2.0, "temp_melt": -1.0}, "baseline_climate_source": "GSWP3_W5E5"}
