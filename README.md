@@ -31,7 +31,7 @@ In the following, we give an overview of the notebooks to analyse the data and t
     - also creates suppl. figure with individual RGI regions for suppl. informations: 
         - `figures/suppl_2_rgi_reg_volume_changes_overshoot{a}_{bc}_portrait_4cols.pdf` (+ variants...)
 
-- [B_main_analysis_figure_creation/2b_suppl_fig_steady_state_glacier_temp_irreversiblities.ipynb](B_main_analysis_figure_creation/2b_suppl_fig_steady_state_glacier_temp_irreversiblities.ipynb) xxx 
+- [B_main_analysis_figure_creation/2b_suppl_fig_steady_state_glacier_temp_irreversiblities.ipynb](B_main_analysis_figure_creation/2b_suppl_fig_steady_state_glacier_temp_irreversiblities.ipynb)
     - Assess the influence of the temporal irreversiblity -> using regional volume projections with random climate after year 2500 
         - creates suppl. figures ... 4_only_global_reversibility .... (+ variants)
         - does additional analysis and figures not shown in the manuscript 
@@ -52,7 +52,7 @@ In the following, we give an overview of the notebooks to analyse the data and t
     - also creates suppl. plot with prcp seasonality    
     - creates files to later create Fig. 4 (but Fig. 4 is created in the next notebook)
  
- - [B_main_analysis_figure_creation/3b_fig4.ipynb](B_main_analysis_figure_creation/3b_fig4.ipynb) 
+ - [B_main_analysis_figure_creation/3b_fig_4.ipynb](B_main_analysis_figure_creation/3b_fig_4.ipynb) 
      - creates `Fig. 4`
 
 - [B_main_analysis_figure_creation/3c_suppl_fig_runoff_RGIregions.ipynb](B_main_analysis_figure_creation/3c_suppl_fig_runoff_RGIregions.ipynb)
