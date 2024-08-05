@@ -26,10 +26,10 @@ In the following, we give an overview of the notebooks to analyse the data and t
 ## 2. Volume ESM notebooks
   
 - [B_main_analysis_figure_creation/2a_fig_2_suppl_prcp.ipynb](B_main_analysis_figure_creation/2a_fig_2_suppl_prcp.ipynb)
-    - creates `Fig 2` (+ variants of it ...)
+    - creates `Fig. 2` (+ variants of it ...)
     - creates suppl. fig. with global prcp. evolution 
     - also creates suppl. figure with individual RGI regions for suppl. informations: 
-        - figures/suppl_2_rgi_reg_volume_changes_overshoot{a}_{bc}_portrait_4cols.pdf (+ variants...)
+        - `figures/suppl_2_rgi_reg_volume_changes_overshoot{a}_{bc}_portrait_4cols.pdf` (+ variants...)
 
 - [B_main_analysis_figure_creation/2b_suppl_fig_steady_state_glacier_temp_irreversiblities.ipynb](B_main_analysis_figure_creation/2b_suppl_fig_steady_state_glacier_temp_irreversiblities.ipynb) xxx 
     - Assess the influence of the temporal irreversiblity -> using regional volume projections with random climate after year 2500 
@@ -38,11 +38,11 @@ In the following, we give an overview of the notebooks to analyse the data and t
         
 
 - [B_main_analysis_figure_creation/2c_fig_3_volume_clustering_map.ipynb](B_main_analysis_figure_creation/2c_fig_3_volume_clustering_map.ipynb) 
-    - regional volume analysis by searching for clusters -> creates Fig. 3
-    - also creates potential suppl. figure with clustering from volume estimates (FIg.3) but showing the runoff evolution instead of volume evolution
-        - not used at the moment in the manuscript: figures/additional_figures/2x_suppl_worldmap_cluster_runoff_rgi_reg_manual_chosen_3_clusters_show_tempFalse_v_8plots.png
+    - regional volume analysis by searching for clusters -> creates `Fig. 3`
+    - also creates potential suppl. figure with clustering from volume estimates but showing the runoff evolution instead of volume evolution
+        - not used at the moment in the manuscript: `figures/additional_figures/2x_suppl_worldmap_cluster_runoff_rgi_reg_manual_chosen_3_clusters_show_tempFalse_v_8plots.png`
     - also does some additional analysis (most of it not used/mentioned in manuscript)
-    - TODO --> compute internally the glacier-area weighted surface slope!!! (at the momment GMIP3 file used...)
+    - TODO --> compute internally the glacier-area weighted surface slope!!! (at the moment GMIP3 file used...)
     
 ## 3. Runoff ESM notebooks 
  
@@ -53,7 +53,7 @@ In the following, we give an overview of the notebooks to analyse the data and t
     - creates files to later create Fig. 4 (but Fig. 4 is created in the next notebook)
  
  - [B_main_analysis_figure_creation/3b_fig4.ipynb](B_main_analysis_figure_creation/3b_fig4.ipynb) 
-     - creates Fig. 4 
+     - creates `Fig. 4`
 
 - [B_main_analysis_figure_creation/3c_suppl_fig_runoff_RGIregions.ipynb](B_main_analysis_figure_creation/3c_suppl_fig_runoff_RGIregions.ipynb)
     - creates suppl. figure with regional glacier runoff ... and precipitation 
@@ -68,11 +68,10 @@ In the following, we give an overview of the notebooks to analyse the data and t
     - creates a supplementary figure CMIP6 climate models with temperature overshoots until 2300 and respective glacier model projections on three glacier models
         - uses data from lilianschuster/glacier-model-projections-until2300: v0.1 - https://doi.org/10.5281/zenodo.10059477
     - shows the exemplarily different regional glacier responses for other existing CMIP6 overshoot scenarios until 2300
-    
-- [B_main_analysis_figure_creation/4b_discussion_comparison_gcms.ipynb](B_main_analysis_figure_creation/4b_discussion_comparison_gcms.ipynb)
+  
+- [B_main_analysis_figure_creation/4b_discussion_bias_correction_period_sensitivity_comparison_climate_models.ipynb](B_main_analysis_figure_creation/4b_discussion_bias_correction_period_sensitivity_comparison_climate_models.ipynb)
+    - for potential discussion : influence of bias correction time period options (1980-2019 vs 2000-2019), and with other overshoot climate models and scenarios
     - at the moment not anymore used for any main or suppl. figures as too complex analysis that tries to compare different overshoot GCMs/scenarios + bias correction approach
-    - but maybe still good for some information to mention in main text?
-    - creates figures like e.g. `figures/4_discussion_gcm_gmodel_comparison.pdf`
     
     
 ## Notes

@@ -1,0 +1,69 @@
+###################
+# create slurm command list
+# of this shape
+# sbatch --array=1-4 slurm_run_with_hydro.slurm 11
+from oggm import utils
+import pandas as pd
+# get the dataset where coordinates of glaciers are stored
+frgi = utils.file_downloader('https://cluster.klima.uni-bremen.de/~oggm/rgi/rgi62_stats.h5')
+#frgi = '/home/users/lschuster/glacierMIP/rgi62_stats.h5'
+odf = pd.read_hdf(frgi, index_col=0)
+n_glac_per_batch = 1000
+
+if rgi_reg == '05':
+    log.workflow('Remove connectivity 2  glaciers')
+    odf = odf.loc[(odf['Connect'] == 0) | (odf['Connect'] ==1)]
+for rgi_reg in odf['O1Region'].unique():
+    n_batches = int(np.ceil(len(odf.loc[odf.O1Region == rgi_reg])/n_glac_per_batch))
+    #print(len(odf.loc[odf.O1Region == rgi_reg]))
+    print(f"sbatch --array=1-{n_batches} slurm_run_with_hydro.slurm {rgi_reg} 'until 2500'")
+print('\n')
+##############
+
+# new including also the last year (2500): ...
+## normal run 
+### done 
+sbatch --array=1-28 slurm_run_with_hydro_2500incl.slurm 01 'until 2500'
+sbatch --array=1-19 slurm_run_with_hydro_2500incl.slurm 02 'until 2500'
+sbatch --array=1-5 slurm_run_with_hydro_2500incl.slurm 03 'until 2500'
+sbatch --array=1-8 slurm_run_with_hydro_2500incl.slurm 04 'until 2500'
+sbatch --array=1-21 slurm_run_with_hydro_2500incl.slurm 05 'until 2500'
+sbatch --array=1-1 slurm_run_with_hydro_2500incl.slurm 06 'until 2500'
+sbatch --array=1-2 slurm_run_with_hydro_2500incl.slurm 07 'until 2500'
+sbatch --array=1-4 slurm_run_with_hydro_2500incl.slurm 08 'until 2500'
+sbatch --array=1-2 slurm_run_with_hydro_2500incl.slurm 09 'until 2500'
+sbatch --array=1-6 slurm_run_with_hydro_2500incl.slurm 10 'until 2500'
+sbatch --array=1-4 slurm_run_with_hydro_2500incl.slurm 11 'until 2500'
+sbatch --array=1-2 slurm_run_with_hydro_2500incl.slurm 12 'until 2500'
+sbatch --array=1-55 slurm_run_with_hydro_2500incl.slurm 13 'until 2500'
+sbatch --array=1-28 slurm_run_with_hydro_2500incl.slurm 14 'until 2500'
+sbatch --array=1-14 slurm_run_with_hydro_2500incl.slurm 15 'until 2500'
+sbatch --array=1-3 slurm_run_with_hydro_2500incl.slurm 16 'until 2500'
+sbatch --array=1-16 slurm_run_with_hydro_2500incl.slurm 17 'until 2500'
+sbatch --array=1-4 slurm_run_with_hydro_2500incl.slurm 18 'until 2500'
+sbatch --array=1-3 slurm_run_with_hydro_2500incl.slurm 19 'until 2500'
+
+
+### random run with prescribed years for >10000 years
+### done 
+sbatch --array=1-28 slurm_run_with_hydro_2500incl.slurm 01 'runs_steady_state'
+sbatch --array=1-19 slurm_run_with_hydro_2500incl.slurm 02 'runs_steady_state'
+sbatch --array=1-5 slurm_run_with_hydro_2500incl.slurm 03 'runs_steady_state' 
+sbatch --array=1-8 slurm_run_with_hydro_2500incl.slurm 04 'runs_steady_state'
+sbatch --array=1-21 slurm_run_with_hydro_2500incl.slurm 05 'runs_steady_state'
+sbatch --array=1-1 slurm_run_with_hydro_2500incl.slurm 06 'runs_steady_state'
+sbatch --array=1-2 slurm_run_with_hydro_2500incl.slurm 07 'runs_steady_state'
+sbatch --array=1-4 slurm_run_with_hydro_2500incl.slurm 08 'runs_steady_state'
+sbatch --array=1-2 slurm_run_with_hydro_2500incl.slurm 09 'runs_steady_state'
+sbatch --array=1-6 slurm_run_with_hydro_2500incl.slurm 10 'runs_steady_state'
+sbatch --array=1-4 slurm_run_with_hydro_2500incl.slurm 11 'runs_steady_state'
+sbatch --array=1-2 slurm_run_with_hydro_2500incl.slurm 12 'runs_steady_state'
+sbatch --array=1-55 slurm_run_with_hydro_2500incl.slurm 13 'runs_steady_state'
+sbatch --array=1-28 slurm_run_with_hydro_2500incl.slurm 14 'runs_steady_state'
+sbatch --array=1-14 slurm_run_with_hydro_2500incl.slurm 15 'runs_steady_state'
+sbatch --array=1-3 slurm_run_with_hydro_2500incl.slurm 16 'runs_steady_state'
+sbatch --array=1-16 slurm_run_with_hydro_2500incl.slurm 17 'runs_steady_state'
+sbatch --array=1-4 slurm_run_with_hydro_2500incl.slurm 18 'runs_steady_state'
+sbatch --array=1-3 slurm_run_with_hydro_2500incl.slurm 19 'runs_steady_state'
+
+
