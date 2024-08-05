@@ -17,9 +17,9 @@ creates GFDL-ESM2M climate data that are flattened (i.e., reducing the dimension
 code available under https://cluster.klima.uni-bremen.de/~lschuster/provide/gfdl-esm2m_oversh_stab_uni_bern/flattened_gfdl_esm2m
 
 run in terminal in OGGM cluster:
-- `sbatch slurm_flatten_oversh_stab_monthly.slurm stab_T12`
+- `flattened_gfdl_esm2m/sbatch slurm_flatten_oversh_stab_monthly.slurm stab_T12`
     - execute python script:
-        - `flatten_oversh_stab_monthly_files.py`
+        - `flattened_gfdl_esm2m/flatten_oversh_stab_monthly_files.py`
   
 
 ## 2. Global OGGM glacier projections runs (with flattened files)
@@ -84,7 +84,7 @@ run in terminal in OGGM cluster:
     
 
 ## 4. Merge PROVIDE and RGI regions in separate files by extracting the most important variables
-- `runs_pre_postprocessing/0a_merge_basins_provide_regions_oversh_stab.ipynb`
+- [A_runs_pre_postprocessing/0a_merge_basins_provide_regions_oversh_stab.ipynb](A_runs_pre_postprocessing/0a_merge_basins_provide_regions_oversh_stab.ipynb)
     - uses the raw data from (2,3) to get the glacier volume, area, and to compute runoff and meltwater components on a monthly and annual basis
 - creates merged data-files in these folders that are later further aggregated  
     - https://cluster.klima.uni-bremen.de/~lschuster/provide/gfdl-esm2m_oversh_stab_uni_bern/runs/output/rgi_reg
@@ -92,48 +92,44 @@ run in terminal in OGGM cluster:
  
     
 ## 5. Find glaciers that do not fail in any of the scenarios
-- `runs_pre_postprocessing/0b_get_common_working_rgi_ids_extract_error_statistics.ipynb`
+- [A_runs_pre_postprocessing/0b_get_common_working_rgi_ids_extract_error_statistics.ipynb](A_runs_pre_postprocessing/0b_get_common_working_rgi_ids_extract_error_statistics.ipynb)
     - extracts error statistics that are mentioned in the methods
-    - uses the RGI batch files `/home/www/lschuster/provide/gfdl-esm2m_oversh_stab_uni_bern/runs/output/RGI{rgi_reg_s}/run_hydro_w5e5_gcm_merged_from_2000_gfdl-esm2...` as input 
+    - uses the RGI batch files `runs/output/RGI{rgi_reg_s}/run_hydro_w5e5_gcm_merged_from_2000_gfdl-esm2...` as input 
     - creates 
-        - `../data/working_rgis_for_oversh_stab_scenario_bc_1980_2019.csv`
-        - `random_climate_run_10000years_working_rgis_for_oversh_stab_scenarios_1980_2019.csv`
+        - `data/working_rgis_for_oversh_stab_scenario_bc_1980_2019.csv`
+        - `data/random_climate_run_10000years_working_rgis_for_oversh_stab_scenarios_1980_2019.csv`
         - and other similar files for `_bc_2000_2019` 
 
-- `runs_pre_postprocessing/0_failing_glaciers_find_reason.ipynb`
-    - just checks for provide region P06 why so much glacier area is failing --> maybe remove or move into 
-    `analysis_notebooks/0_get_common_working_rgi_ids_extract_error_statistics.ipynb`
-
 ## 6. Create volume/runoff/meltwater timeseries for the summed up characteristics of every region (RGI region, PROVIDE region or basin-wide) by always only selecting the common running glaciers 
-- `runs_pre_postprocessing/0c_extract_summed_up_common_running_projections_files.ipynb`
-    - creates `../data/common_running_sum_all_rgi_reg_oversh_stab_2000_2500_bc_1980_2019.nc`
-    - creates `../data/common_running_sum_all_basins_oversh_stab_2000_2500_bc_1980_2019.nc`
-    - creates `../data/common_running_random_climate_stab_T15_sum_all_rgi_reg_oversh_stab_bc_1980_2019.nc`
+- [A_runs_pre_postprocessing/0c_extract_summed_up_common_running_projections_files.ipynb](A_runs_pre_postprocessing/0c_extract_summed_up_common_running_projections_files.ipynb)
+    - creates `data/common_running_sum_all_rgi_reg_oversh_stab_2000_2500_bc_1980_2019.nc`
+    - creates `data/common_running_sum_all_basins_oversh_stab_2000_2500_bc_1980_2019.nc`
+    - creates `data/common_running_random_climate_stab_T15_sum_all_rgi_reg_oversh_stab_bc_1980_2019.nc`
 
 
 
 ## 7. Extract specific climate characteristics
-- `runs_pre_postprocessing/0d_check_extract_global_regional_gcm_climate.ipynb`
+- [A_runs_pre_postprocessing/0d_check_extract_global_regional_gcm_climate.ipynb](A_runs_pre_postprocessing/0d_check_extract_global_regional_gcm_climate.ipynb)
     - extracts near-glacier area-weighted climate estimates of GFDL-ESM2M (globally and per rgi-region, provide region or basin) 
-        - saves these estimates under `annual_glob_glacier_rgi_reg_temp_precip_timeseries_oversh_stab.csv`
+        - saves these estimates under `data/annual_glob_rgi_reg_basin_temp_precip_timeseries_oversh_stab.csv`
     - todo: 
-        - remove those entries that are not needed, always use the the merged dataset!
+        - remove those entries that are not needed
 
-- `runs_pre_postprocessing/0e_extract_RGIregion_basin_drymonths.ipynb`
+- [A_runs_pre_postprocessing/0e_extract_RGIregion_basin_drymonths.ipynb](A_runs_pre_postprocessing/0e_extract_RGIregion_basin_drymonths.ipynb)
     - extracts basin  precipitation seasonality of three-month rolling average precipitation and driest months
-    - creates `../data/basin_past_pr_seasonality_3m_roll_lastm.csv`
+    - creates `data/basin_past_pr_seasonality_3m_roll_lastm.csv`
         - precipitation seasonality of three-month rolling average precipitation for each basin from 1990 to 2019
-    - creates `../data/basin_driest_months.csv`
+    - creates `data/basin_driest_months.csv`
 
 
-#### NOT sure if we actually use it later???  belongs here ... TODO
-- `runs_pre_postprocessing/maybe_old/1d_global_gcm_climate_cmip6_cmip5_ipcc_ar6_def.ipynb`
-    - creates `Global_mean_temp_deviation....*.csv`
+#### NOT sure if we will actually use it later??? if not, remove it!!! 
+- [A_runs_pre_postprocessing/maybe_old/1d_global_gcm_climate_cmip6_cmip5_ipcc_ar6_def.ipynb](A_runs_pre_postprocessing/maybe_old/1d_global_gcm_climate_cmip6_cmip5_ipcc_ar6_def.ipynb)
+    - creates `analysis_notebooks/Global_mean_temp_deviation....*.csv`
     - creates supplemental figures:
         - gcm_global_colors_by_temp_change*_ipcc_ar6_def.png
 
 
     
   
-## all additional analysis is done in `main_analysis_figure_creation`
-- notebooks are described in `README.md`
+## all additional analysis is done in [B_main_analysis_figure_creation](B_main_analysis_figure_creation)
+- notebooks are described in [README.md](README.md)
