@@ -2,28 +2,26 @@
 Code to reproduce the glacier projections, figures and analysis of 
 - Schuster et al.(in review): TITLE, submitted to ... 
 
-The most important data is available at Zenodo under (Schuster et al., 2024 ... ZENODO...). 
+If you use the code or the data, please cite the manuscript in review and the dataset/code on Zenodo. 
 
-If you use the code or the data, please cite the manuscript in review and the dataset on Zenodo. 
+
 We projected global glacier mass and runoff from year 2000 to 2500 with the glacier model [OGGM v1.6.1](https://doi.org/10.5281/zenodo.8287580) ([Maussion et al., 2019](https://www.geosci-model-dev.net/12/909/2019/)) by appyling the climate from the [GFDL-ESM2M Earth Sytem Model (Lacroix et al., in review)](https://doi.org/10.22541/essoar.171588258.80079180/v1) from four stabilisation and three overshoot scenarios from year 2000 to 2500. We also projected glacier mass beyond 2500 (for additional 10000 years) by applying randomly the climate from the years 2399 to 2499 of the GFDL-ESM2M. 
 
 
-The documentation of the code for the climate preprocessing, the OGGM projection runs and postprocessing is in [README_climate_preprocessing_OGGM_runs.md](README_climate_preprocessing_OGGM_runs.md). Some workflows and data for e.g. of the climate analysis of the individual regions or basins are only visible in the OGGM cluster folder which can be accessed under https://cluster.klima.uni-bremen.de/~lschuster/provide/gfdl-esm2m_oversh_stab_uni_bern/.   
+The documentation of the code for the climate preprocessing, the OGGM projection runs and postprocessing is in [README_climate_preprocessing_OGGM_runs.md](README_climate_preprocessing_OGGM_runs.md). Some workflows and data for e.g. of the climate analysis of the individual regions or basins are only visible in the OGGM cluster folder which can be accessed under https://cluster.klima.uni-bremen.de/~lschuster/provide/gfdl-esm2m_oversh_stab_uni_bern/.  The most important data is documented under [README_data.md](README_data.md) and available under [data/](data/).
 
 In the following, we give an overview of the notebooks to analyse the data and to create the figures of the manuscript:
 
+## Overview over analysis notebooks
 
-
-# Overview over analysis notebooks
-
-## 1. Idealised/Conceptual model notebooks
+### 1. Idealised/Conceptual model notebooks
 
 - [B_main_analysis_figure_creation/1_idealised_suppl_comparison.ipynb](B_main_analysis_figure_creation/1_idealised_suppl_comparison.ipynb)
     - all idealised experiment figures are created here 
         - creates `Fig. 1, Supplementary Fig. SXX`
 
          
-## 2. Volume ESM notebooks
+### 2. Volume ESM notebooks
   
 - [B_main_analysis_figure_creation/2a_fig_2_suppl_prcp.ipynb](B_main_analysis_figure_creation/2a_fig_2_suppl_prcp.ipynb)
     - creates `Fig. 2` (+ variants of it ...)
@@ -42,9 +40,8 @@ In the following, we give an overview of the notebooks to analyse the data and t
     - also creates potential suppl. figure with clustering from volume estimates but showing the runoff evolution instead of volume evolution
         - not used at the moment in the manuscript: `figures/additional_figures/2x_suppl_worldmap_cluster_runoff_rgi_reg_manual_chosen_3_clusters_show_tempFalse_v_8plots.png`
     - also does some additional analysis (most of it not used/mentioned in manuscript)
-    - TODO --> compute internally the glacier-area weighted surface slope!!! (at the moment GMIP3 file used...)
     
-## 3. Runoff ESM notebooks 
+### 3. Runoff ESM notebooks 
  
 - [B_main_analysis_figure_creation/3a_basin_stats.ipynb](B_main_analysis_figure_creation/3a_basin_stats.ipynb)  
     - does some basin statistic analysis mentioned in the manuscript 
@@ -62,7 +59,7 @@ In the following, we give an overview of the notebooks to analyse the data and t
     - checks the issue of glacierized area temporal changes 
     - results shortly mentioned in methods, but no figures from here are used
 
-## Additional analysis that is just for supplements or more for the discussion... 
+### Additional analysis that is just for supplements or more for the discussion... 
 
 - [B_main_analysis_figure_creation/4a_discussion_CMIP6_over_gcms.ipynb](B_main_analysis_figure_creation/4a_discussion_CMIP6_over_gcms.ipynb) 
     - creates a supplementary figure CMIP6 climate models with temperature overshoots until 2300 and respective glacier model projections on three glacier models
