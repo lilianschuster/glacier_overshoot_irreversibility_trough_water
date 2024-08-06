@@ -94,8 +94,8 @@ run in terminal in OGGM cluster:
     - extracts error statistics that are mentioned in the methods
     - uses the RGI batch files `A_runs_pre_postprocessing/output/RGI{rgi_reg_s}/run_hydro_w5e5_gcm_merged_from_2000_gfdl-esm2...` as input 
     - creates 
-        - `data/working_rgis_for_oversh_stab_scenario_bc_1980_2019.csv`
-        - `data/random_climate_run_10000years_working_rgis_for_oversh_stab_scenarios_1980_2019.csv`
+        - `data/additional_data/working_rgis_for_oversh_stab_scenario_bc_1980_2019.csv`
+        - `data/additional_data/random_climate_run_10000years_working_rgis_for_oversh_stab_scenarios_1980_2019.csv`
         - and other similar files for `_bc_2000_2019` 
 
 ## 6. Create volume/runoff/meltwater timeseries for the summed up characteristics of every region (RGI region, PROVIDE region or basin-wide) by always only selecting the common running glaciers 
@@ -113,9 +113,9 @@ run in terminal in OGGM cluster:
 
 - [A_runs_pre_postprocessing/0e_extract_RGIregion_basin_drymonths.ipynb](A_runs_pre_postprocessing/0e_extract_RGIregion_basin_drymonths.ipynb)
     - extracts basin  precipitation seasonality of three-month rolling average precipitation and driest months
-    - creates `data/basin_past_pr_seasonality_3m_roll_lastm.csv`
+    - creates `data/additional_data/basin_past_pr_seasonality_3m_roll_lastm.csv`
         - precipitation seasonality of three-month rolling average precipitation for each basin from 1990 to 2019
-    - creates `data/basin_driest_months.csv`
+    - creates `data/additional_data/basin_driest_months.csv`
     
   
 ## all additional analysis is done in [B_main_analysis_figure_creation](B_main_analysis_figure_creation)
