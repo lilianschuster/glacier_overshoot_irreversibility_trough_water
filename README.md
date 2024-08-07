@@ -1,14 +1,13 @@
 # Irreversible glacier change and trough water for centuries after overshooting the 1.5°C temperature target
 Code to reproduce the glacier projections, figures and analysis of 
-- Schuster et al.(in review): TITLE, submitted to ... 
+- Schuster et al.(in review): Irreversible glacier change and trough water for centuries after overshooting the 1.5°C temperature target, submitted to Nature Climate Change
 
 If you use the code or the data, please cite the manuscript in review and the dataset/code on Zenodo. 
-
 
 We projected global glacier mass and runoff from year 2000 to 2500 with the glacier model [OGGM v1.6.1](https://doi.org/10.5281/zenodo.8287580) ([Maussion et al., 2019](https://www.geosci-model-dev.net/12/909/2019/)) by appyling the climate from the [GFDL-ESM2M Earth Sytem Model (Lacroix et al., in review)](https://doi.org/10.22541/essoar.171588258.80079180/v1) from four stabilisation and three overshoot scenarios from year 2000 to 2500. We also projected glacier mass beyond 2500 (for additional 10000 years) by applying randomly the climate from the years 2399 to 2499 of the GFDL-ESM2M. 
 
 
-The documentation of the code for the climate preprocessing, the OGGM projection runs and postprocessing is in [README_climate_preprocessing_OGGM_runs.md](README_climate_preprocessing_OGGM_runs.md). Some workflows and data for e.g. of the climate analysis of the individual regions or basins are only visible in the OGGM cluster folder which can be accessed under https://cluster.klima.uni-bremen.de/~lschuster/provide/gfdl-esm2m_oversh_stab_uni_bern/.  The most important data is documented under [README_data.md](README_data.md) and available under [data/](data/).
+The documentation of the code for the climate preprocessing, the OGGM projection runs and postprocessing is in [README_climate_preprocessing_OGGM_runs.md](README_climate_preprocessing_OGGM_runs.md). Some workflows and data for e.g. of the climate analysis of the individual regions or basins are only visible in the OGGM cluster folder which can be accessed under https://cluster.klima.uni-bremen.de/~lschuster/provide/gfdl-esm2m_oversh_stab_uni_bern/. The most important data is documented under [README_data.md](README_data.md) and available under [data/](data/).
 
 In the following, we give an overview of the notebooks to analyse the data and to create the figures of the manuscript:
 
@@ -17,16 +16,17 @@ In the following, we give an overview of the notebooks to analyse the data and t
 ### 1. Idealised/Conceptual model notebooks
 
 - [B_main_analysis_figure_creation/1_idealised_suppl_comparison.ipynb](B_main_analysis_figure_creation/1_idealised_suppl_comparison.ipynb)
-    - all idealised experiment figures are created here 
-        - creates `Fig. 1, Supplementary Fig. SXX`
+    - all idealised experiment figures `Fig. 1, Supplementary Fig. SXX` are created here
+    - postprocessed experiments (OGGM glacier directories) are saved in https://cluster.klima.uni-bremen.de/~lschuster/provide/gfdl-esm2m_oversh_stab_uni_bern/data/idealised_exps_preprocessing/, but can also be reproduced (takes longer) 
+    
 
          
 ### 2. Volume ESM notebooks
   
 - [B_main_analysis_figure_creation/2a_fig_2_suppl_prcp.ipynb](B_main_analysis_figure_creation/2a_fig_2_suppl_prcp.ipynb)
     - creates `Fig. 2` (+ variants of it ...)
-    - creates suppl. fig. with global prcp. evolution 
-    - also creates suppl. figure with individual RGI regions for suppl. informations: 
+    - creates supplementary figure with global precipitation evolution 
+    - creates supplementary figure with individual RGI regions for suppl. informations: 
         - `figures/suppl_2_rgi_reg_volume_changes_overshoot{a}_{bc}_portrait_4cols.pdf` (+ variants...)
 
 - [B_main_analysis_figure_creation/2b_suppl_fig_steady_state_glacier_temp_irreversiblities.ipynb](B_main_analysis_figure_creation/2b_suppl_fig_steady_state_glacier_temp_irreversiblities.ipynb)

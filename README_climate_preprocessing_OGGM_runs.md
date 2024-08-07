@@ -9,7 +9,7 @@ We applied two bias correction options, that were aggregated separately, but in 
     - `_bc_1980_2019` (default approach, considered period for bias correction is 2000--2019)
     - `_bc_2000_2019` (considered period for bias correction is 2000--2019)
 
-The raw data that is not in Zenodo is available under https://cluster.klima.uni-bremen.de/~lschuster/provide/gfdl-esm2m_oversh_stab_uni_bern/data. All files and described folders are in https://cluster.klima.uni-bremen.de/~lschuster/provide/gfdl-esm2m_oversh_stab_uni_bern/. 
+The raw data that is not in Zenodo is available under https://cluster.klima.uni-bremen.de/~lschuster/provide/gfdl-esm2m_oversh_stab_uni_bern/data/additional_data. All files and described folders are in https://cluster.klima.uni-bremen.de/~lschuster/provide/gfdl-esm2m_oversh_stab_uni_bern/. 
 
 ## 1. Flatten GFDL-ESM2M ESM climate datasets
 creates GFDL-ESM2M climate data that are flattened (i.e., reducing the dimension from lon, lat to a merged lon_lat dimension and only selecting those gridpoints that are near to glaciers). This is done to speed up the climate extraction during the OGGM runs. 
@@ -92,31 +92,33 @@ run in terminal in OGGM cluster:
 ## 5. Find glaciers that do not fail in any of the scenarios
 - [A_runs_pre_postprocessing/0b_get_common_working_rgi_ids_extract_error_statistics.ipynb](A_runs_pre_postprocessing/0b_get_common_working_rgi_ids_extract_error_statistics.ipynb)
     - extracts error statistics that are mentioned in the methods
-    - uses the RGI batch files `A_runs_pre_postprocessing/output/RGI{rgi_reg_s}/run_hydro_w5e5_gcm_merged_from_2000_gfdl-esm2...` as input 
+    - uses the RGI batch files `A_runs_pre_postprocessing/output/RGIXX/run_hydro_w5e5_gcm_merged_from_2000_gfdl-esm2...` as input 
     - creates 
         - `data/additional_data/working_rgis_for_oversh_stab_scenario_bc_1980_2019.csv`
         - `data/additional_data/random_climate_run_10000years_working_rgis_for_oversh_stab_scenarios_1980_2019.csv`
-        - and other similar files for `_bc_2000_2019` 
+        - and other similar files for the bias correction perion 2000-2019 (`_bc_2000_2019`) 
 
 ## 6. Create volume/runoff/meltwater timeseries for the summed up characteristics of every region (RGI region, PROVIDE region or basin-wide) by always only selecting the common running glaciers 
 - [A_runs_pre_postprocessing/0c_extract_summed_up_common_running_projections_files.ipynb](A_runs_pre_postprocessing/0c_extract_summed_up_common_running_projections_files.ipynb)
     - creates `data/common_running_sum_all_rgi_reg_oversh_stab_2000_2500_bc_1980_2019.nc`
     - creates `data/common_running_sum_all_basins_oversh_stab_2000_2500_bc_1980_2019.nc`
-    - creates `data/common_running_random_climate_stab_T15_sum_all_rgi_reg_oversh_stab_bc_1980_2019.nc`
+    - creates `data/common_running_sum_all_rgi_reg_extended_oversh_stab_over_10000years_1980_2019.nc`
 
 
 
 ## 7. Extract specific climate characteristics
-- [A_runs_pre_postprocessing/0d_check_extract_global_regional_gcm_climate.ipynb](A_runs_pre_postprocessing/0d_check_extract_global_regional_gcm_climate.ipynb)
-    - extracts near-glacier area-weighted climate estimates of GFDL-ESM2M (globally and per rgi-region, provide region or basin) 
-        - saves these estimates under `data/annual_glob_rgi_reg_basin_temp_precip_timeseries_oversh_stab.csv`
 
-- [A_runs_pre_postprocessing/0e_extract_RGIregion_basin_drymonths.ipynb](A_runs_pre_postprocessing/0e_extract_RGIregion_basin_drymonths.ipynb)
+
+- [A_runs_pre_postprocessing/0d_extract_RGIregion_basin_drymonths.ipynb](A_runs_pre_postprocessing/0d_extract_RGIregion_basin_drymonths.ipynb)
     - extracts basin  precipitation seasonality of three-month rolling average precipitation and driest months
     - creates `data/additional_data/basin_past_pr_seasonality_3m_roll_lastm.csv`
         - precipitation seasonality of three-month rolling average precipitation for each basin from 1990 to 2019
     - creates `data/additional_data/basin_driest_months.csv`
     
-  
+- [A_runs_pre_postprocessing/0e_check_extract_global_regional_gcm_climate.ipynb](A_runs_pre_postprocessing/0e_check_extract_global_regional_gcm_climate.ipynb)
+    - extracts near-glacier area-weighted climate estimates of GFDL-ESM2M (globally and per rgi-region or basin) 
+        - also uses statistics from previous notebook about the driest months within a year ... 
+        - saves these estimates under `data/annual_glob_rgi_reg_basin_temp_precip_timeseries_oversh_stab.csv`
+        
 ## all additional analysis is done in [B_main_analysis_figure_creation](B_main_analysis_figure_creation)
-- notebooks are described in [README.md](README.md)
+- notebooks are described in [README.md](README.md) and the main data is further described in [README_data.md](README_data.md)
