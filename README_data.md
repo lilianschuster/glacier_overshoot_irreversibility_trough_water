@@ -2,18 +2,18 @@
 
 ## Aggregated glacier projections with the glacier model OGGM
 
-### Glacier projections aggregated per RGI6 region or basin from 2000 to 2500 under the GFDL-ESM2M climate scenarios
+### Glacier projections aggregated per RGI6 region or basin from 2000 to 2500 under the GFDL-ESM2M climate scenarios (two netCDF files)
 
-   - eight scenarios from the GFDL-ESM2M are used 
+   - `scenario`: eight scenarios from the GFDL-ESM2M are used 
        - stab_T12, stab_T15, stab_T20, stab_T25, stab_T30 for 1.2-3.0°C Stabilisation 
        - oversh_20OS15, oversh_20OS15, oversh_20OS15 for overshoots peaking at 2.0, 2.5 or 3.0°C and returning to 1.5°C
    - variables are the aggregated sums from individual glaciers for each RGI region (`rgi_reg`) or basin. We only used those glaciers that work on all scenarios ("the common running glaciers"). This is necessary for comparisons between scenarios. 
    - bias correction period is here 1980-2019 (default approach that is used in the manuscript)
-   - netCDF dataset: `data/common_running_sum_all_rgi_reg_oversh_stab_2000_2500_bc_1980_2019.nc`
-       - variables:
-           - glacier `volume` (m3) and `area` (m2) are aggregated sums and valid for the first day of the year
-           - `runoff`: Annual glacier runoff: sum of annual melt and liquid precipitation on and off the glacier using a fixed-gauge with a glacier minimum reference area from year 2000 (unit: kg yr-1)
-           - `melt_off_on`: Annual meltwater components from glacier runoff: sum of meltwater on and off the glacier using a fixed-gauge with a glacier minimum reference area from year 2000 (unit: kg yr-1)
+   - netCDF file: `data/common_running_sum_all_rgi_reg_oversh_stab_2000_2500_bc_1980_2019.nc`
+       - glacier variables:
+           - `volume` (m3) and `area` (m2) are aggregated sums and valid for the first day of the year
+           - `runoff` (kg yr-1): Annual glacier runoff: sum of annual melt and liquid precipitation on and off the glacier using a fixed-gauge with a glacier minimum reference area from year 2000 
+           - `melt_off_on` (kg yr-1): Annual meltwater components from glacier runoff: sum of meltwater on and off the glacier using a fixed-gauge with a glacier minimum reference area from year 2000
        - used for Fig. 2-4 and supplementary figures
    - netCDF dataset: `data/common_running_sum_all_basins_oversh_stab_2000_2500_bc_1980_2019.nc`
        - variables:
@@ -22,18 +22,18 @@
        - used for Fig. 4 and supplementary figures
 
 
-###  Glacier volume projections over >10000 years with the glacier model OGGM by using an extended overshoot and stabilisation scenario of the GFDL-ESM2M climate scenarios
-   - netcdf dataset: `data/common_running_sum_all_rgi_reg_extended_oversh_stab_over_10000years_1980_2019.nc`
+###  Glacier volume projections over >10000 years with the glacier model OGGM by using an extended overshoot and stabilisation scenario of the GFDL-ESM2M climate scenarios (one netCDF file)
+   - netcdf file: `data/common_running_sum_all_rgi_reg_extended_oversh_stab_over_10000years_1980_2019.nc`
        - variables: 
            - glacier `volume` (m3) :  aggregated sum over glaciers and valid for the first day of the year
        - variables are the aggregated sums per RGI6 region (`rgi_reg`) for the common running glaciers of all scenarios until 2500 and of the common running glaciers of the two extended random climate scenario options over >10000 years
-       - two extended scenarios
+       - `scenario`: two extended scenarios
             - `oversh_T30OS15_extended_w_2399-2499_stab_T15` : from year 2000 to 2500 the 3.0->1.5°C Overshoot, then a random climate from 2399-2499 from the 1.5°C Stabilisation scenario
             - `stab_T15_extended_w_2399-2499_stab_T15` :  from year 2000 to 2500 the 1.5°C Stabilisation, then a random climate from 2399-2499 from the 1.5°C Stabilisation scenario
        - bias correction period is here 1980-2019 (default approach that is used in the manuscript
        - used in supplementary figure and for analysis in main text 
 
-## Global and regional extracted climate from the GFDL-ESM2M climate scenarios
+## Global and regional extracted climate from the GFDL-ESM2M climate scenarios (one csv-file)
 
 - csv file: `data/annual_glob_rgi_reg_basin_temp_precip_timeseries_oversh_stab.csv` 
     - extracted annual timeseries of temperature, precipitation and other precipitation metrics from the GFDL-ESM2M with the following columns:
@@ -41,8 +41,8 @@
         - `region`: 
             - `global`: global averages
             - `global_glacier`: global glacier-area weighted averages (by taking the gridpoints nearest to the glaciers)
-            - `RGIXX_glacier`: regional glacier-area weighted averages for that specific RGI region
-            - `basin_2103_glacier`: basin glacier-area weighted averages (indices as defined by the Global Runoff Data Centre GRDC)
+            - `RGIXX_glacier`: regional glacier-area weighted averages for that specific RGI region XX
+            - `basin_XXXX_glacier`: basin glacier-area weighted averages (indices XXXX as defined by the Global Runoff Data Centre GRDC)
         - `scenario`: one of the eight scenarios  (same naming conventions as in the netcdf glacier projection files
         - `temp` : air temperature (unit: K)
         - `temp_21yr_avg` : same as `temp`; but using a centered 21-year rolling average (nan-values at beginning and end)
