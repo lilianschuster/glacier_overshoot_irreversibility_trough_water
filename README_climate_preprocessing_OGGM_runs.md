@@ -104,11 +104,7 @@ run in terminal in OGGM cluster:
     - creates `data/common_running_sum_all_basins_oversh_stab_2000_2500_bc_1980_2019.nc`
     - creates `data/common_running_sum_all_rgi_reg_extended_oversh_stab_over_10000years_1980_2019.nc`
 
-
-
 ## 7. Extract specific climate characteristics
-
-
 - [A_runs_pre_postprocessing/0d_extract_RGIregion_basin_drymonths.ipynb](A_runs_pre_postprocessing/0d_extract_RGIregion_basin_drymonths.ipynb)
     - extracts basin  precipitation seasonality of three-month rolling average precipitation and driest months
     - creates `data/additional_data/basin_past_pr_seasonality_3m_roll_lastm.csv`
