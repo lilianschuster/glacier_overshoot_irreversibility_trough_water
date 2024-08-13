@@ -29,7 +29,7 @@ In the following, we give an overview of the notebooks to analyse the data and t
 - [B_main_analysis_figure_creation/2b_suppl_fig_steady_state_glacier_temp_irreversiblities.ipynb](B_main_analysis_figure_creation/2b_suppl_fig_steady_state_glacier_temp_irreversiblities.ipynb)
     - Assesses the influence of the temporal irreversiblity -> using regional volume projections with random climate after year 2500 
     - creates `Supplementary Fig. 4` 
-    -does additional analysis and figures not shown in the manuscript 
+    - does additional analysis and figures not shown in the manuscript 
         
 
 - [B_main_analysis_figure_creation/2c_fig_3_volume_clustering_map.ipynb](B_main_analysis_figure_creation/2c_fig_3_volume_clustering_map.ipynb) 
