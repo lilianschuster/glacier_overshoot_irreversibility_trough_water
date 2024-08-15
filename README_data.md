@@ -1,119 +1,65 @@
-# Preprocessing, glacier projection runs and postprocessing workflows
+# Main data documentation
 
-We projected global glacier changes under OGGM v1.6.1 with the GFDL-ESM2M from 2000 to 2500 under four stabilisation and three overshoot scenarios. We also made extended projections for an additional 10,000 years by applying a random climate from the years 2399 to 2499. 
+## 1. Aggregated overshoot and stabilisation glacier projections with the glacier model OGGM
 
-In this document, we describe the scripts and notebooks for the climate data preprocessing, the OGGM runs, and the postprocessing workflows. 
+The bias correction period is in all main data files from 1980 to 2019, which is also the period we used in the manuscript.
 
-We applied two bias correction options aggregated separately, but in the manuscript, only `_bc_1980_2019` is used. 
-    - `_bc_1980_2019` (default approach, considered period for bias correction is 1980--2019)
-    - `_bc_2000_2019` (considered period for bias correction is 2000--2019)
+### 1a. From 2000 to 2500 under the GFDL-ESM2M climate scenarios (two netCDF files)
 
-The raw data that is not in Zenodo is available under https://cluster.klima.uni-bremen.de/~lschuster/provide/gfdl-esm2m_oversh_stab_uni_bern/data/additional_data. All files and described folders are in https://cluster.klima.uni-bremen.de/~lschuster/provide/gfdl-esm2m_oversh_stab_uni_bern/. 
+   - `scenario`: we used eight scenarios from the GFDL-ESM2M
+       - stab_T12, stab_T15, stab_T20, stab_T25, stab_T30 for 1.2, 1.5, 2.0, 2.5 and 3.0°C Stabilisation 
+       - oversh_20OS15, oversh_20OS15, oversh_20OS15 for overshoots peaking at 2.0, 2.5 or 3.0°C and returning to 1.5°C
+   - variables are the aggregated sums from individual glaciers for each RGI region or basin. To better compare scenarios, we only used those glaciers that work in all scenarios ("the common running glaciers"). 
+   
+**aggregated per RGI region (`rgi_reg`)**: netCDF file: `data/common_running_sum_all_rgi_reg_oversh_stab_2000_2500_bc_1980_2019.nc`
+   - glacier variables:
+       - `volume` (m3) and `area` (m2) are aggregated sums and valid for the first day of the year
+       - `runoff` (kg yr-1): Annual glacier runoff: sum of annual melt and liquid precipitation on and off the glacier using a fixed-gauge with a glacier minimum reference area from the year 2000 
+       - `melt_off_on` (kg yr-1): Annual meltwater components from glacier runoff: sum of meltwater on and off the glacier using a fixed-gauge with a glacier minimum reference area from the year 2000
+   - used for Fig. 2-4 and supplementary figures
+   
+**aggregated per `basin`**: netCDF file: `data/common_running_sum_all_basins_oversh_stab_2000_2500_bc_1980_2019.nc`
+   - variables:
+       - same as regional file, but in addition monthly runoff (`runoff_monthly`) and meltwater components (`melt_off_on_monthly`), unit for both: kg month-1
+   - `basin` indices defined as in the Global Runoff Data Centre dataset
+   - used for Fig. 4 and supplementary figures
 
-## 1. Flatten GFDL-ESM2M ESM climate datasets
-creates GFDL-ESM2M climate data that are flattened (i.e., reducing the dimension from lon, lat to a merged lon_lat dimension and only selecting those grid points near glaciers). We do this to speed up the climate extraction during the OGGM runs. 
 
-Run in the terminal in the OGGM cluster:
-- e.g. `A_runs_pre_postprocessing/flattened_gfdl_esm2m/sbatch slurm_flatten_oversh_stab_monthly.slurm stab_T12`
-    - executes python script:
-        - `A_runs_pre_postprocessing/flattened_gfdl_esm2m/flatten_oversh_stab_monthly_files.py`
-  
+###  1b. For over >10000 years under extended GFDL-ESM2M climate scenarios (one netCDF file)
 
-## 2. Global OGGM glacier projections runs (with flattened files)
-- execute python script:
-    - [A_runs_pre_postprocessing/00_run_with_hydro_oversh_stab_per_rgi_reg_2500incl.py](A_runs_pre_postprocessing/00_run_with_hydro_oversh_stab_per_rgi_reg_2500incl.py)
-        - uses internally [00_func_add_2500incl.py](00_func_add_2500incl.py)
-- via: 
-    ```
-        sbatch --array=1-28 slurm_run_with_hydro_2500incl.slurm 01 'until 2500'
-        sbatch --array=1-19 slurm_run_with_hydro_2500incl.slurm 02 'until 2500'
-        sbatch --array=1-5 slurm_run_with_hydro_2500incl.slurm 03 'until 2500'
-        sbatch --array=1-8 slurm_run_with_hydro_2500incl.slurm 04 'until 2500'
-        sbatch --array=1-21 slurm_run_with_hydro_2500incl.slurm 05 'until 2500'
-        sbatch --array=1-1 slurm_run_with_hydro_2500incl.slurm 06 'until 2500'
-        sbatch --array=1-2 slurm_run_with_hydro_2500incl.slurm 07 'until 2500'
-        sbatch --array=1-4 slurm_run_with_hydro_2500incl.slurm 08 'until 2500'
-        sbatch --array=1-2 slurm_run_with_hydro_2500incl.slurm 09 'until 2500'
-        sbatch --array=1-6 slurm_run_with_hydro_2500incl.slurm 10 'until 2500'
-        sbatch --array=1-4 slurm_run_with_hydro_2500incl.slurm 11 'until 2500'
-        sbatch --array=1-2 slurm_run_with_hydro_2500incl.slurm 12 'until 2500'
-        sbatch --array=1-55 slurm_run_with_hydro_2500incl.slurm 13 'until 2500'
-        sbatch --array=1-28 slurm_run_with_hydro_2500incl.slurm 14 'until 2500'
-        sbatch --array=1-14 slurm_run_with_hydro_2500incl.slurm 15 'until 2500'
-        sbatch --array=1-3 slurm_run_with_hydro_2500incl.slurm 16 'until 2500'
-        sbatch --array=1-16 slurm_run_with_hydro_2500incl.slurm 17 'until 2500'
-        sbatch --array=1-4 slurm_run_with_hydro_2500incl.slurm 18 'until 2500'
-        sbatch --array=1-3 slurm_run_with_hydro_2500incl.slurm 19 'until 2500'
-    ```
-- raw OGGM output in 1000 glacier batches is saved as netCDF files in the folders RGIXX under https://cluster.klima.uni-bremen.de/~lschuster/provide/gfdl-esm2m_oversh_stab_uni_bern/A_runs_pre_postprocessing/output/
-    - e.g in https://cluster.klima.uni-bremen.de/~lschuster/provide/gfdl-esm2m_oversh_stab_uni_bern/A_runs_pre_postprocessing/output/RGI03/run_hydro_w5e5_gcm_merged_from_2000_gfdl-esm2m_oversh_T20OS15_endyr_2500_bc_1980_2019_rgi03_0_1000.nc
+- `scenario`: two extended scenarios are used
+    - `oversh_T30OS15_extended_w_2399-2499_stab_T15`: from the year 2000 to 2500, the 3.0->1.5°C Overshoot, then a random climate from 2399-2499 from the 1.5°C Stabilisation scenario
+    - `stab_T15_extended_w_2399-2499_stab_T15`:  from the year 2000 to 2500, the 1.5°C Stabilisation, then a random climate from 2399-2499 from the 1.5°C Stabilisation scenario
+- variables are the aggregated sums per RGI6 region for the common running glaciers of all scenarios until 2500 and of the common running glaciers of the two extended random climate scenario options over >10000 years
 
-## 3. Repeat global OGGM glacier projections under a random climate of the years 2399-2499 for 10000 additional years
-- repeat what we did in Sect. 2, but run for 10000 years in `A_runs_pre_postprocessing/00_run_with_hydro_oversh_stab_per_rgi_reg.py`
-    - uses internally `run_random_climate_prescribe_years` defined in  `A_runs_pre_postprocessing/func_add_2500incl.py`
+**aggregated per RGI region (`rgi_reg`)**: netCDF file: `data/common_running_sum_all_rgi_reg_extended_oversh_stab_over_10000years_1980_2019.nc`
+   - variables: 
+       - glacier `volume` (m3):  aggregated sum over glaciers and valid for the first day of the year   
+   - used in Supplementary Fig. 4 and for analysis in the main text 
 
-- via:
-    ```
-    sbatch --array=1-28 slurm_run_with_hydro_2500incl.slurm 01 'runs_steady_state'
-    sbatch --array=1-19 slurm_run_with_hydro_2500incl.slurm 02 'runs_steady_state'
-    sbatch --array=1-5 slurm_run_with_hydro_2500incl.slurm 03 'runs_steady_state' 
-    sbatch --array=1-8 slurm_run_with_hydro_2500incl.slurm 04 'runs_steady_state'
-    sbatch --array=1-21 slurm_run_with_hydro_2500incl.slurm 05 'runs_steady_state'
-    sbatch --array=1-1 slurm_run_with_hydro_2500incl.slurm 06 'runs_steady_state'
-    sbatch --array=1-2 slurm_run_with_hydro_2500incl.slurm 07 'runs_steady_state'
-    sbatch --array=1-4 slurm_run_with_hydro_2500incl.slurm 08 'runs_steady_state'
-    sbatch --array=1-2 slurm_run_with_hydro_2500incl.slurm 09 'runs_steady_state'
-    sbatch --array=1-6 slurm_run_with_hydro_2500incl.slurm 10 'runs_steady_state'
+## 2. Global and regional extracted climate from the GFDL-ESM2M climate scenarios (one CSV file)
 
-    sbatch --array=1-4 slurm_run_with_hydro_2500incl.slurm 11 'runs_steady_state'
-    sbatch --array=1-2 slurm_run_with_hydro_2500incl.slurm 12 'runs_steady_state'
-    sbatch --array=1-55 slurm_run_with_hydro_2500incl.slurm 13 'runs_steady_state'
+**aggregated globally, per RGI region or basin**: CSV file: `data/annual_glob_rgi_reg_basin_temp_precip_timeseries_oversh_stab.csv` 
+- extracted annual time series of temperature, precipitation and other precipitation metrics from the GFDL-ESM2M with the following columns:
+    - `year`: 1979 to 2499
+    - `region`: 
+        - `global`: global averages
+        - `global_glacier`: global glacier-area weighted averages (by taking the gridpoints nearest to the glaciers)
+        - `RGIXX_glacier`: regional glacier-area weighted averages for that specific RGI region XX
+        - `basin_XXXX_glacier`: basin glacier-area weighted averages (indices XXXX as defined by the Global Runoff Data Centre GRDC)
+    - `scenario`: one of the eight scenarios  (same naming conventions as in the netCDF glacier projection files)
+    - `temp`: air temperature (unit: K)
+    - `temp_21yr_avg`: same as `temp`; but using a centered 21-year rolling average (nan-values at beginning and end)
+    - `precip`: total precipitation (unit: `kg m-2 yr-1`)
+    - `precip_21yr_avg`: same as `temp`; but using a centered 21-year rolling average (nan-values at beginning and end)
+    - `precip_3mdriest_avg_per_day`: three-month rolling precipitation average over the three months with the lowest precipitation (the chosen three months are selected once and do not change over time), only available for the basins. Here, precipitation data is extracted from the entire basin and not just the nearest glacier gridpoints (unit: kg m-2 day-1)
+    - `precip_3mdriest_avg_per_day_51yr_avg`: same as `precip_3mdriest_avg_per_day`; but using a centered 51-year rolling average (nan-values at beginning and end)
+- used in Fig. 2-4 and supplementary figures
 
-    sbatch --array=1-28 slurm_run_with_hydro_2500incl.slurm 14 'runs_steady_state'
-    sbatch --array=1-14 slurm_run_with_hydro_2500incl.slurm 15 'runs_steady_state'
-    sbatch --array=1-3 slurm_run_with_hydro_2500incl.slurm 16 'runs_steady_state'
-    sbatch --array=1-16 slurm_run_with_hydro_2500incl.slurm 17 'runs_steady_state'
-    sbatch --array=1-4 slurm_run_with_hydro_2500incl.slurm 18 'runs_steady_state'
-    sbatch --array=1-3 slurm_run_with_hydro_2500incl.slurm 19 'runs_steady_state'
-        ```
-- raw OGGM output in 1000 glacier batches is saved in the folders RGIXX under https://cluster.klima.uni-bremen.de/~lschuster/provide/gfdl-esm2m_oversh_stab_uni_bern/A_runs_pre_postprocessing/output/
-    - e.g. in https://cluster.klima.uni-bremen.de/~lschuster/provide/gfdl-esm2m_oversh_stab_uni_bern/A_runs_pre_postprocessing/output/RGI03/run_random_climate_from2500_using2400_2500_gfdl-esm2m_stab_T15_initial_oversh_T30OS15_bc_1980_2019_rgi03_0_1000.nc
-    
 
-## 4. Merge PROVIDE and RGI regions in separate files by extracting the most important variables
-- [A_runs_pre_postprocessing/0a_merge_basins_provide_regions_oversh_stab.ipynb](A_runs_pre_postprocessing/0a_merge_basins_provide_regions_oversh_stab.ipynb)
-    - uses the raw data from (Sect. 2,3) to get the glacier volume and area and to compute runoff and meltwater components on a monthly and annual basis
-- creates merged data files in the following folders that are later further aggregated  (basically just used as temporary files)
-    - https://cluster.klima.uni-bremen.de/~lschuster/provide/gfdl-esm2m_oversh_stab_uni_bern/A_runs_pre_postprocessing/output/rgi_reg
-    - https://cluster.klima.uni-bremen.de/~lschuster/provide/gfdl-esm2m_oversh_stab_uni_bern/A_runs_pre_postprocessing/output/provide_reg
- 
-    
-## 5. Find glaciers that do not fail in any of the scenarios
-- [A_runs_pre_postprocessing/0b_get_common_working_rgi_ids_extract_error_statistics.ipynb](A_runs_pre_postprocessing/0b_get_common_working_rgi_ids_extract_error_statistics.ipynb)
-    - extracts error statistics that we mention in the methods
-    - uses the RGI batch files `A_runs_pre_postprocessing/output/RGIXX/run_hydro_w5e5_gcm_merged_from_2000_gfdl-esm2...` as input 
-    - creates 
-        - `data/additional_data/working_rgis_for_oversh_stab_scenario_bc_1980_2019.csv`
-        - `data/additional_data/random_climate_run_10000years_working_rgis_for_oversh_stab_scenarios_1980_2019.csv`
-        - and other similar files for the bias correction period 2000-2019 (`_bc_2000_2019`) 
+## Additional data
 
-## 6. Create volume/runoff/meltwater time-series for the aggregated characteristics of every region (RGI region, PROVIDE region or basin-wide) by always only selecting the common running glaciers 
-- [A_runs_pre_postprocessing/0c_extract_summed_up_common_running_projections_files.ipynb](A_runs_pre_postprocessing/0c_extract_summed_up_common_running_projections_files.ipynb)
-    - creates `data/common_running_sum_all_rgi_reg_oversh_stab_2000_2500_bc_1980_2019.nc`
-    - creates `data/common_running_sum_all_basins_oversh_stab_2000_2500_bc_1980_2019.nc`
-    - creates `data/common_running_sum_all_rgi_reg_extended_oversh_stab_over_10000years_1980_2019.nc`
+In the notebooks, we extract some additional  "intermediate" summary data that we saved for later usage for a few figures or analyses. This "intermediate" data is available at https://cluster.klima.uni-bremen.de/~lschuster/provide/gfdl-esm2m_oversh_stab_uni_bern/data/additional_data/. 
 
-## 7. Extract specific climate characteristics
-- [A_runs_pre_postprocessing/0d_extract_RGIregion_basin_drymonths.ipynb](A_runs_pre_postprocessing/0d_extract_RGIregion_basin_drymonths.ipynb)
-    - extracts basin  precipitation seasonality of three-month rolling average precipitation and driest months
-    - creates `data/additional_data/basin_past_pr_seasonality_3m_roll_lastm.csv`
-        - precipitation seasonality of three-month rolling average precipitation for each basin from 1990 to 2019
-    - creates `data/additional_data/basin_driest_months.csv`
-    
-- [A_runs_pre_postprocessing/0e_check_extract_global_regional_gcm_climate.ipynb](A_runs_pre_postprocessing/0e_check_extract_global_regional_gcm_climate.ipynb)
-    - extracts near-glacier area-weighted climate estimates of GFDL-ESM2M (globally and per RGI region or basin) 
-        - it also uses statistics from the previous notebook about the driest months within a year ... 
-        - saves these estimates under `data/annual_glob_rgi_reg_basin_temp_precip_timeseries_oversh_stab.csv`
-        
-## All additional analysis is done in [B_main_analysis_figure_creation](B_main_analysis_figure_creation)
-- We describe the figure creation notebooks in [README.md](README.md), and the main data is further described in [README_data.md](README_data.md)
+We describe the scripts and notebooks for climate preprocessing, the OGGM runs, and postprocessing in [README_climate_preprocessing_OGGM_runs.md](README_climate_preprocessing_OGGM_runs.md) and those for figure creation in [README.md](README.md).
+
