@@ -42,16 +42,18 @@ In the following, we give an overview of the notebooks to analyse the data and t
  
 - [B_main_analysis_figure_creation/3a_basin_stats.ipynb](B_main_analysis_figure_creation/3a_basin_stats.ipynb)  
     - does some basin statistic analysis mentioned in the manuscript 
-    - creates `Supplementary Fig. 6, 7`  of selected dry glaciated basins with analysis on annual and meltwater runoff
-    - creates `Supplementary Fig. 8` with basin statistics of all 60 glaciated basins
-    - creates `Supplementary Fig. 10` with three-month averaged precipitation seasonality of selected basins     
+    - creates `Supplementary Figs. 6-8` of all glaciated basins with analysis on annual runoff and precipitation 
+    - creates `Supplementary Fig. 9` of selected dry glaciated basins with analysis on annual meltwater runoff
+    - creates `Supplementary Fig. 10` with basin statistics of all 60 glaciated basins
+    - creates `Supplementary Fig. 11` with three-month averaged precipitation seasonality of selected basins     
     - creates files to create later Fig. 4 (but we create Fig. 4 only in the next notebook)
  
  - [B_main_analysis_figure_creation/3b_fig_4.ipynb](B_main_analysis_figure_creation/3b_fig_4.ipynb) 
      - creates `Fig. 4`
 
 - [B_main_analysis_figure_creation/3c_suppl_fig_runoff_RGIregions.ipynb](B_main_analysis_figure_creation/3c_suppl_fig_runoff_RGIregions.ipynb)
-    - creates `Supplementary Fig. 9` with RGI region aggregated glacier runoff and near-glacier precipitation 
+    - creates additional figure with RGI region aggregated glacier runoff and near-glacier precipitation
+    - this figure is currently not used, as we replaced it with Supplementary Figs. 6-8 (of 3a_basin_stats.ipynb) that show all 60 glaciated basins
     
 - [B_main_analysis_figure_creation/3d_check_runoff_glacierized_area_overshoot.ipynb](B_main_analysis_figure_creation/3d_check_runoff_glacierized_area_overshoot.ipynb)
     - checks the issue of glacierised area temporal changes 
