@@ -1,8 +1,8 @@
 # Irreversible glacier change and trough water for centuries after overshooting the 1.5°C temperature target
 Code to reproduce the glacier projections, figures and analysis of 
-- Schuster et al. (in review): Irreversible glacier change and trough water for centuries after overshooting the 1.5°C temperature target, submitted to Nature Climate Change
+- Schuster et al. (in preparation): Irreversible glacier change and trough water for centuries after overshooting the 1.5°C temperature target, will be submitted to Nature Climate Change
 
-If you use the code or the data, please cite the manuscript in review (link will be added once available) and the dataset/code on Zenodo (link will be added upon manuscript publication). 
+If you use the code or the data, please cite the manuscript (link to the preprint will be added once available) and the dataset/code on Zenodo (link will be added upon manuscript publication). 
 
 We projected global glacier mass and runoff from the year 2000 to 2500 with the glacier model [OGGM v1.6.1](https://doi.org/10.5281/zenodo.8287580) ([Maussion et al., 2019](https://www.geosci-model-dev.net/12/909/2019/)) by applying the climate from the [GFDL-ESM2M Earth Sytem Model (Lacroix et al., in review)](https://doi.org/10.22541/essoar.171588258.80079180/v1) from five stabilisation and three overshoot scenarios from the year 2000 to 2500. We also projected glacier mass beyond 2500 (for an additional 10000 years) by randomly applying the climate from the years 2399 to 2499 of the GFDL-ESM2M. 
 
@@ -15,7 +15,7 @@ In the following, we give an overview of the notebooks to analyse the data and t
 ### 1. Idealised/Conceptual model notebooks
 
 - [B_main_analysis_figure_creation/1_idealised_suppl_comparison.ipynb](B_main_analysis_figure_creation/1_idealised_suppl_comparison.ipynb)
-    - all idealised experiment figures `Fig. 1, Supplementary Fig. 2, 3` are created here
+    - all idealised experiment figures `Fig. 1, Supplementary Figs. 2, 3` are created here
     - postprocessed experiments (OGGM glacier directories) are saved in https://cluster.klima.uni-bremen.de/~lschuster/provide/gfdl-esm2m_oversh_stab_uni_bern/data/idealised_exps_preprocessing/, but can also be reproduced (takes longer) 
     
 
@@ -42,16 +42,18 @@ In the following, we give an overview of the notebooks to analyse the data and t
  
 - [B_main_analysis_figure_creation/3a_basin_stats.ipynb](B_main_analysis_figure_creation/3a_basin_stats.ipynb)  
     - does some basin statistic analysis mentioned in the manuscript 
-    - creates `Supplementary Fig. 6, 7`  of selected dry glaciated basins with analysis on annual and meltwater runoff
-    - creates `Supplementary Fig. 8` with basin statistics of all 60 glaciated basins
-    - creates `Supplementary Fig. 10` with three-month averaged precipitation seasonality of selected basins     
+    - creates `Supplementary Figs. 6-8` of all glaciated basins with analysis on annual runoff and precipitation 
+    - creates `Supplementary Fig. 9` of selected dry glaciated basins with analysis on annual meltwater runoff
+    - creates `Supplementary Fig. 10` with basin statistics of all 60 glaciated basins
+    - creates `Supplementary Fig. 11` with three-month averaged precipitation seasonality of selected basins     
     - creates files to create later Fig. 4 (but we create Fig. 4 only in the next notebook)
  
  - [B_main_analysis_figure_creation/3b_fig_4.ipynb](B_main_analysis_figure_creation/3b_fig_4.ipynb) 
      - creates `Fig. 4`
 
 - [B_main_analysis_figure_creation/3c_suppl_fig_runoff_RGIregions.ipynb](B_main_analysis_figure_creation/3c_suppl_fig_runoff_RGIregions.ipynb)
-    - creates `Supplementary Fig. 9` with RGI region aggregated glacier runoff and near-glacier precipitation 
+    - creates additional figure with RGI region aggregated glacier runoff and near-glacier precipitation
+    - this figure is currently not used, as we replaced it with Supplementary Figs. 6-8 (of 3a_basin_stats.ipynb) that show all 60 glaciated basins
     
 - [B_main_analysis_figure_creation/3d_check_runoff_glacierized_area_overshoot.ipynb](B_main_analysis_figure_creation/3d_check_runoff_glacierized_area_overshoot.ipynb)
     - checks the issue of glacierised area temporal changes 
