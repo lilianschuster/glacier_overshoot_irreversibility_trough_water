@@ -1,6 +1,6 @@
-# Irreversible glacier change and trough water for centuries after overshooting the 1.5°C temperature target
+# Irreversible glacier change and trough water for centuries after overshooting 1.5°C
 Code to reproduce the glacier projections, figures and analysis of 
-- Schuster et al. (in preparation): Irreversible glacier change and trough water for centuries after overshooting the 1.5°C temperature target, will be submitted to Nature Climate Change
+- Schuster et al. (in review): Irreversible glacier change and trough water for centuries after overshooting 1.5°C
 
 If you use the code or the data, please cite the manuscript (link to the preprint will be added once available) and the dataset/code on Zenodo (link will be added upon manuscript publication). 
 
