@@ -1,6 +1,7 @@
 import seaborn as sns
 import numpy as np
 import pandas as pd
+import geopandas as gpd
 
 pal_colorblind = sns.color_palette("colorblind")
 color_scenario = {'stab_T12': pal_colorblind[-3],
@@ -63,21 +64,9 @@ d_reg_num_name['17'] = 'Southern Andes'
 d_reg_num_name['18'] = 'New Zealand'
 d_reg_num_name['19'] = 'Subantarctic & Antarctic Islands' ## NEW name!!!
 
-
-import geopandas as gpd
-pd_provide_reg_full_name = gpd.read_file('/home/www/lschuster/provide/provide_glacier_regions/provide_glacier_regions.shp')
-pd_provide_reg_full_name.index = pd_provide_reg_full_name.provide_id
-provide_reg_full_name_dict = dict(pd_provide_reg_full_name['full_name'])
-provide_reg_full_name_dict['P06'] = 'East Asia'
-provide_reg_full_name_dict['P05'] = 'Svalbard, Jan Mayen\nand Russian Arctic'
-provide_reg_full_name_dict['P13'] = 'Subantarctic and\nAntarctic Islands'
-provide_reg_full_name_dict['P09'] = 'High Mountain Asia' # need to rename that probably, but this is better than "Central Asia" as that is already the name for only RGI region 13
-
-
-
-#### both functions copied from notebook: 3_basin_stats.ipynb    ####
-# function to correctly find the largest continuous span of years in a list
+#### both functions are mainly used in notebook 3a_basin_stats.ipynb    
 def find_largest_continuous_span(years):
+    # function to correctly find the largest continuous span of years in a list
     max_span_start = years[0]
     max_span_end = years[0]
     current_span_start = years[0]
@@ -102,7 +91,8 @@ def find_largest_continuous_span(years):
 def get_basin_trough_water_stats(sel_stab, sel_oversh, 
                                  runoff_var = 'runoff_dry3m_rel_2000_2050_%'):
 
-    # “Trough water” occurs if the 51-year average annual runoff from the 
+    # Find years of trough water and extract statistics
+    # Definition: “Trough water” occurs if the 51- or 21-year average annual runoff from the 
     # “Overshoot 3.0°C -> 1.5°C” scenario is at least 5\% smaller than (i) in the “Stabilisation 1.5°C” scenario for 20 years 
     # and  (ii) than in the baseline period 
     # (initial steady state for the idealised experiments, 2000--2020 or 2000--2050 climate for the projections with the ESM).
@@ -113,6 +103,7 @@ def get_basin_trough_water_stats(sel_stab, sel_oversh,
     #    Table with runoff_var of the stabilisation or overshoot scenario for a specific basin 
     # runoff_var: str
     #    one of the three runoff variables ('runoff_rel_2000_2050_%', 'melt_off_on_rel_2000_2050_%', 'runoff_dry3m_rel_2000_2050_%')
+    #    can also be 21-year averaged
 
     # returns array with: 
     # - amount of trough water years (also if they are non-continuous)
@@ -155,4 +146,13 @@ def get_basin_trough_water_stats(sel_stab, sel_oversh,
 
     return np.array([trough_water_years, runoff_diff_trough,
                      water_trough_min_yr, water_trough_max_diff, yrs_trough_start_end])
+
+### this paragraph is not anymore used for main study
+pd_provide_reg_full_name = gpd.read_file('/home/www/lschuster/provide/provide_glacier_regions/provide_glacier_regions.shp')
+pd_provide_reg_full_name.index = pd_provide_reg_full_name.provide_id
+provide_reg_full_name_dict = dict(pd_provide_reg_full_name['full_name'])
+provide_reg_full_name_dict['P06'] = 'East Asia'
+provide_reg_full_name_dict['P05'] = 'Svalbard, Jan Mayen\nand Russian Arctic'
+provide_reg_full_name_dict['P13'] = 'Subantarctic and\nAntarctic Islands'
+provide_reg_full_name_dict['P09'] = 'High Mountain Asia' # need to rename that probably, but this is better than "Central Asia" as that is already the name for only RGI region 13
 
