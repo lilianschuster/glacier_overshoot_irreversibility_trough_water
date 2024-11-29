@@ -1,74 +1,81 @@
-# Irreversible glacier change and trough water for centuries after overshooting 1.5°C
-Code to reproduce the glacier projections, figures and analysis of 
-- Schuster et al. (in review): Irreversible glacier change and trough water for centuries after overshooting 1.5°C
+# README for the code and data of the manuscript: Irreversible glacier change and trough water for centuries after overshooting 1.5°C
 
-If you use the code or the data, please cite the manuscript (link to the preprint will be added once available) and the dataset/code on Zenodo (link will be added upon manuscript publication). 
+Code and Data to reproduce the glacier projections, figures and analysis of 
+- Schuster, L., Maussion, F., Rounce, D. R., Ultee, L., Schmitt, P.,  Lacroix, F., Frölicher, T., Schleussner, C.-F. (in review): Irreversible glacier change and trough water for centuries after overshooting 1.5°C, Preprint available at: [https://doi.org/10.21203/rs.3.rs-5045894/v1](https://doi.org/10.21203/rs.3.rs-5045894/v1)
 
-We projected global glacier mass and runoff from the year 2000 to 2500 with the glacier model [OGGM v1.6.1](https://doi.org/10.5281/zenodo.8287580) ([Maussion et al., 2019](https://www.geosci-model-dev.net/12/909/2019/)) by applying the climate from the [GFDL-ESM2M Earth Sytem Model (Lacroix et al., in review)](https://doi.org/10.22541/essoar.171588258.80079180/v1) from five stabilisation and three overshoot scenarios from the year 2000 to 2500. We also projected glacier mass beyond 2500 (for an additional 10000 years) by randomly applying the climate from the years 2399 to 2499 of the GFDL-ESM2M. 
+If you use the code or the data, please cite the manuscript above and the dataset/code on Zenodo (link will be added). 
 
-The documentation of the code for the climate preprocessing, the OGGM projection runs, and postprocessing is in [README_climate_preprocessing_OGGM_runs.md](README_climate_preprocessing_OGGM_runs.md). Some workflows and data for e.g. of the climate analysis of the individual regions or basins are only visible in the OGGM cluster folder which can be accessed under https://cluster.klima.uni-bremen.de/~lschuster/provide/gfdl-esm2m_oversh_stab_uni_bern/. The most important data is documented under [README_data.md](README_data.md) and available under [data/](data/).
+We projected global glacier mass and runoff from the year 2000 to 2500 with the glacier model [OGGM v1.6.1](https://doi.org/10.5281/zenodo.8287580) ([Maussion et al., 2019](https://www.geosci-model-dev.net/12/909/2019/)) by applying the climate from the [GFDL-ESM2M Earth Sytem Model (Lacroix et al., 2024)](https://doi.org/10.1029/2024EF004862) from five stabilisation and three overshoot scenarios from the year 2000 to 2500. We also projected glacier mass beyond 2500 (for an additional 10000 years) by randomly applying the climate from the years 2399 to 2499 of the GFDL-ESM2M. 
 
-In the following, we give an overview of the notebooks to analyse the data and to create the figures for the manuscript:
+- The documentation of the code for the climate preprocessing, the OGGM projection runs, and postprocessing is in [README_A_climate_preprocessing_OGGM_runs.md](README_A_climate_preprocessing_OGGM_runs.md). A
+- An overview of the notebooks to analyse the data and to create the figures for the manuscript is in [README_B_analysis_figure_notebooks.md](README_B_analysis_figure_notebooks.md).
 
-## Overview over analysis notebooks
 
-### 1. Idealised/Conceptual model notebooks
+The most important data is documented below and available under [data/](data/).
 
-- [B_main_analysis_figure_creation/1_idealised_suppl_comparison.ipynb](B_main_analysis_figure_creation/1_idealised_suppl_comparison.ipynb)
-    - all idealised experiment figures `Fig. 1, Supplementary Figs. 2, 3` are created here
-    - postprocessed experiments (OGGM glacier directories) are saved in https://cluster.klima.uni-bremen.de/~lschuster/provide/gfdl-esm2m_oversh_stab_uni_bern/data/idealised_exps_preprocessing/, but can also be reproduced (takes longer) 
-    
 
-### 2. Volume ESM notebooks
-  
-- [B_main_analysis_figure_creation/2a_fig_2_suppl_prcp.ipynb](B_main_analysis_figure_creation/2a_fig_2_suppl_prcp.ipynb)
-    - creates `Fig. 2` (+ variants of it ...)
-    - creates `Supplementary Fig. 11` (with global precipitation evolution)
-    - creates `Supplementary Fig. 5` (with individual RGI region projections for all overshoot scenarios)
+## Main data documentation
 
-- [B_main_analysis_figure_creation/2b_suppl_fig_steady_state_glacier_temp_irreversiblities.ipynb](B_main_analysis_figure_creation/2b_suppl_fig_steady_state_glacier_temp_irreversiblities.ipynb)
-    - Assesses the influence of the temporal irreversibility -> using regional projections with random climate after the year 2500
-    - creates `Supplementary Fig. 4` and additional regional analysis and figures not shown in the manuscript
-    - also looks into single glacier behavior in RGI19
-        
+### 1. Aggregated overshoot and stabilisation glacier projections with the glacier model OGGM
 
-- [B_main_analysis_figure_creation/2c_fig_3_volume_clustering_map.ipynb](B_main_analysis_figure_creation/2c_fig_3_volume_clustering_map.ipynb) 
-    - regional mass analysis by searching for clusters -> creates `Fig. 3`
-    - also creates potential supplementary figure with clustering from mass estimates but showing the runoff evolution instead of the mass evolution
-        - not used at the moment in the manuscript: `figures/additional_figures/2x_suppl_worldmap_cluster_runoff_rgi_reg_manual_chosen_3_clusters_show_tempFalse_v_8plots.png`
-    - also does some additional analysis (most of it not used/mentioned in manuscript)
-    
-### 3. Runoff ESM notebooks 
- 
-- [B_main_analysis_figure_creation/3a_basin_stats.ipynb](B_main_analysis_figure_creation/3a_basin_stats.ipynb)  
-    - does some basin statistic analysis mentioned in the manuscript 
-    - creates `Supplementary Figs. 6-8` of all glaciated basins with analysis on annual runoff and precipitation 
-    - creates `Supplementary Fig. 9` of selected dry glaciated basins with analysis on annual meltwater runoff
-    - creates `Supplementary Fig. 10` with basin statistics of all 60 glaciated basins
-    - creates `Supplementary Fig. 11` with three-month averaged precipitation seasonality of selected basins     
-    - creates files to create later Fig. 4 (but we create Fig. 4 only in the next notebook)
- 
- - [B_main_analysis_figure_creation/3b_fig_4.ipynb](B_main_analysis_figure_creation/3b_fig_4.ipynb) 
-     - creates `Fig. 4`
+The bias correction period is in all main data files from 1980 to 2019, which is also the period we used in the manuscript.
 
-- [B_main_analysis_figure_creation/3c_suppl_fig_runoff_RGIregions.ipynb](B_main_analysis_figure_creation/3c_suppl_fig_runoff_RGIregions.ipynb)
-    - creates additional figure with RGI region aggregated glacier runoff and near-glacier precipitation
-    - this figure is currently not used, as we replaced it with Supplementary Figs. 6-8 (of 3a_basin_stats.ipynb) that show all 60 glaciated basins
-    
-- [B_main_analysis_figure_creation/3d_check_runoff_glacierized_area_overshoot.ipynb](B_main_analysis_figure_creation/3d_check_runoff_glacierized_area_overshoot.ipynb)
-    - checks the issue of glacierised area temporal changes 
-    - we shortly mention results in methods, but we do not use any figures from this notebook
+#### 1a. From 2000 to 2500 under the GFDL-ESM2M climate scenarios (two netCDF files)
 
-### 4. Additional analysis that is just for supplements or for the discussion
+   - `scenario`: we used eight scenarios from the GFDL-ESM2M
+       - stab_T12, stab_T15, stab_T20, stab_T25, stab_T30 for 1.2, 1.5, 2.0, 2.5 and 3.0°C Stabilisation 
+       - oversh_20OS15, oversh_20OS15, oversh_20OS15 for overshoots peaking at 2.0, 2.5 or 3.0°C and returning to 1.5°C
+   - variables are the aggregated sums from individual glaciers for each RGI region or basin. To better compare scenarios, we only used those glaciers that work in all scenarios ("the common running glaciers"). 
+   
+**aggregated per RGI region (`rgi_reg`)**: netCDF file: `data/common_running_sum_all_rgi_reg_oversh_stab_2000_2500_bc_1980_2019.nc`
+   - glacier variables:
+       - `volume` (m3), `volume_bsl`, and `area` (m2) are aggregated sums and valid for the first day of the year. `volume_bsl` is the volume below sea-level as estimated by OGGM.          
+       - `runoff` (kg yr-1): Annual glacier runoff: sum of annual melt and liquid precipitation on and off the glacier using a fixed-gauge with a glacier minimum reference area from the year 2000 
+       - `melt_off_on` (kg yr-1): Annual meltwater components from glacier runoff: sum of meltwater on and off the glacier using a fixed-gauge with a glacier minimum reference area from the year 2000
+   - used for Fig. 2-4 and supplementary figures
+   
+**aggregated per `basin`**: netCDF file: `data/common_running_sum_all_basins_oversh_stab_2000_2500_bc_1980_2019.nc`
+   - variables:
+       - same as regional file, but in addition monthly runoff (`runoff_monthly`) and meltwater components (`melt_off_on_monthly`), unit for both: kg month-1
+   - `basin` indices defined as in the Global Runoff Data Centre dataset
+   - used for Fig. 4 and supplementary figures
 
-- [B_main_analysis_figure_creation/4a_discussion_CMIP6_over_gcms.ipynb](B_main_analysis_figure_creation/4a_discussion_CMIP6_over_gcms.ipynb) 
-    - creates `Supplementary Fig. 1` with global temperature changes of CMIP6 climate scenarios, which have temperature overshoots until 2300 and respective glacier model projections on three glacier models. We analyse glacier model projections as global aggregates and for three example regions.
-        - uses data from Schuster et al., 2023: lilianschuster/glacier-model-projections-until2300: v0.1 Zenodo (https://doi.org/10.5281/zenodo.10059477)
-  
-- [B_main_analysis_figure_creation/4b_discussion_bias_correction_period_sensitivity_comparison_climate_models.ipynb](B_main_analysis_figure_creation/4b_discussion_bias_correction_period_sensitivity_comparison_climate_models.ipynb)
-    - for potential discussion: influence of the period options of the bias correction (1980-2019 vs 2000-2019), and with other overshoot climate models and scenarios
-    - at the moment, the analysis in this notebook is not used anymore for any main or supplementary figures as it got too complex for this rather conceptual study 
-    
-## Notes
-All files available at the OGGM cluster are defined in the code as e.g. `/home/www/lschuster/...` or `/home/www/fmaussion/...`. These files are accessible outside the OGGM cluster via https://cluster.klima.uni-bremen.de/~lschuster/ or https://cluster.klima.uni-bremen.de/~fmaussion/, respectively. 
+
+####  1b. For over >10000 years under extended GFDL-ESM2M climate scenarios (one netCDF file)
+
+- `scenario`: two extended scenarios are used
+    - `oversh_T30OS15_extended_w_2399-2499_stab_T15`: from the year 2000 to 2500, the 3.0->1.5°C Overshoot, then a random climate from 2399-2499 from the 1.5°C Stabilisation scenario
+    - `stab_T15_extended_w_2399-2499_stab_T15`:  from the year 2000 to 2500, the 1.5°C Stabilisation, then a random climate from 2399-2499 from the 1.5°C Stabilisation scenario
+- variables are the aggregated sums per RGI6 region for the common running glaciers of all scenarios until 2500 and of the common running glaciers of the two extended random climate scenario options over >10000 years
+
+**aggregated per RGI region (`rgi_reg`)**: netCDF file: `data/common_running_sum_all_rgi_reg_extended_oversh_stab_over_10000years_1980_2019.nc`
+   - variables: 
+       - glacier `volume` (m3):  aggregated sum over glaciers and valid for the first day of the year   
+   - used in Supplementary Fig. 4 and for analysis in the main text 
+
+### 2. Global and regional extracted climate from the GFDL-ESM2M climate scenarios (one CSV file)
+
+**aggregated globally, per RGI region or basin**: CSV file: `data/annual_glob_rgi_reg_basin_temp_precip_timeseries_oversh_stab.csv` 
+- extracted annual time series of temperature, precipitation and other precipitation metrics from the GFDL-ESM2M with the following columns:
+    - `year`: 1979 to 2499
+    - `region`: 
+        - `global`: global averages
+        - `global_glacier`: global glacier-area weighted averages (by taking the gridpoints nearest to the glaciers)
+        - `RGIXX_glacier`: regional glacier-area weighted averages for that specific RGI region XX
+        - `basin_XXXX_glacier`: basin glacier-area weighted averages (indices XXXX as defined by the Global Runoff Data Centre GRDC)
+    - `scenario`: one of the eight scenarios  (same naming conventions as in the netCDF glacier projection files)
+    - `temp`: air temperature (unit: K)
+    - `temp_21yr_avg`: same as `temp`; but using a centered 21-year rolling average (nan-values at beginning and end)
+    - `precip`: total precipitation (unit: `kg m-2 yr-1`)
+    - `precip_21yr_avg`: same as `temp`; but using a centered 21-year rolling average (nan-values at beginning and end)
+    - `precip_3mdriest_avg_per_day`: three-month rolling precipitation average over the three months with the lowest precipitation (the chosen three months are selected once and do not change over time), only available for the basins. Here, precipitation data is extracted from the entire basin and not just the nearest glacier gridpoints (unit: kg m-2 day-1)
+    - `precip_3mdriest_avg_per_day_51yr_avg`: same as `precip_3mdriest_avg_per_day`; but using a centered 51-year rolling average (nan-values at beginning and end)
+- used in Fig. 2-4 and supplementary figures
+
+
+### Additional data
+
+In the notebooks, we extract some additional  "intermediate" summary data that we saved for later usage for a few figures or analyses. This "intermediate" data is available at https://cluster.klima.uni-bremen.de/~lschuster/provide/gfdl-esm2m_oversh_stab_uni_bern/data/additional_data/. 
+
+We describe the scripts and notebooks for climate preprocessing, the OGGM runs, and postprocessing in [README_A_climate_preprocessing_OGGM_runs.md](README_A_climate_preprocessing_OGGM_runs.md) and those for figure creation in [README_B_analysis_figure_notebooks.md](README_B_analysis_figure_notebooks.md).
 
