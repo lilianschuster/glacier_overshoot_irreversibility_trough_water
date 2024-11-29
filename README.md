@@ -1,18 +1,20 @@
 # README for the code and data of the manuscript: Irreversible glacier change and trough water for centuries after overshooting 1.5°C
 
+[DOI: 10.5281/zenodo.14247718](https://doi.org/10.5281/zenodo.14247718)
+
+This is the README of the GitHub repository: [https://github.com/lilianschuster/glacier_overshoot_irreversibility_trough_water](https://github.com/lilianschuster/glacier_overshoot_irreversibility_trough_water). Markdown files and notebooks are best readable directly online in the [GitHub repository](https://github.com/lilianschuster/glacier_overshoot_irreversibility_trough_water).
+
 Code and Data to reproduce the glacier projections, figures and analysis of 
 - Schuster, L., Maussion, F., Rounce, D. R., Ultee, L., Schmitt, P.,  Lacroix, F., Frölicher, T., Schleussner, C.-F. (in review): Irreversible glacier change and trough water for centuries after overshooting 1.5°C, Preprint available at: [https://doi.org/10.21203/rs.3.rs-5045894/v1](https://doi.org/10.21203/rs.3.rs-5045894/v1)
 
-If you use the code or the data, please cite the manuscript above and the dataset/code on Zenodo (link will be added). 
+If you use the code or the data, please cite the manuscript above and the dataset/code on Zenodo ([DOI: 10.5281/zenodo.14247718](https://doi.org/10.5281/zenodo.14247718)). 
 
 We projected global glacier mass and runoff from the year 2000 to 2500 with the glacier model [OGGM v1.6.1](https://doi.org/10.5281/zenodo.8287580) ([Maussion et al., 2019](https://www.geosci-model-dev.net/12/909/2019/)) by applying the climate from the [GFDL-ESM2M Earth Sytem Model (Lacroix et al., 2024)](https://doi.org/10.1029/2024EF004862) from five stabilisation and three overshoot scenarios from the year 2000 to 2500. We also projected glacier mass beyond 2500 (for an additional 10000 years) by randomly applying the climate from the years 2399 to 2499 of the GFDL-ESM2M. 
 
-- The documentation of the code for the climate preprocessing, the OGGM projection runs, and postprocessing is in [README_A_climate_preprocessing_OGGM_runs.md](README_A_climate_preprocessing_OGGM_runs.md). A
+- The documentation of the code for the climate preprocessing, the OGGM projection runs, and postprocessing is in [README_A_climate_preprocessing_OGGM_runs.md](README_A_climate_preprocessing_OGGM_runs.md). 
 - An overview of the notebooks to analyse the data and to create the figures for the manuscript is in [README_B_analysis_figure_notebooks.md](README_B_analysis_figure_notebooks.md).
 
-
 The most important data is documented below and available under [data/](data/).
-
 
 ## Main data documentation
 
