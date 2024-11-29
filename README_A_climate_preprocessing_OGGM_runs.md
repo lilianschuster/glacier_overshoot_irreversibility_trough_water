@@ -117,4 +117,4 @@ Run in the terminal in the OGGM cluster:
         - saves these estimates under `data/annual_glob_rgi_reg_basin_temp_precip_timeseries_oversh_stab.csv`
         
 ## All additional analysis is done in [B_main_analysis_figure_creation](B_main_analysis_figure_creation)
-- We describe the analysis and figure creation notebooks in [README_B_analysis_figure_notebooks.md.md](README_B_analysis_figure_notebooks.md.md), and the main data is further described in [README.md](README.md).
+- We describe the analysis and figure creation notebooks in [README.md](README.md), and the main data is further described in [README_data.md](README_data.md).
