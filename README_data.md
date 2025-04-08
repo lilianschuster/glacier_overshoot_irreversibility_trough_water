@@ -1,6 +1,9 @@
 # Main data documentation
 The most important data is documented below and available under [data/](data/).
 
+### 0. GFDL-ESM2M climate model projections
+If you want to use the GFDL-ESM2M climate model data, please download it directly from Lacroix et al. (2024, https://doi.org/10.5281/zenodo.11091132) and cite their dataset and the related publication (https://doi.org/10.1029/2024EF004862). 
+
 ### 1. Aggregated overshoot and stabilisation glacier projections with the glacier model OGGM
 
 The bias correction period is in all main data files from 1980 to 2019, which is also the period we used in the manuscript.
@@ -8,7 +11,7 @@ The bias correction period is in all main data files from 1980 to 2019, which is
 #### 1a. From 2000 to 2500 under the GFDL-ESM2M climate scenarios (two netCDF files)
 
    - `scenario`: we used eight scenarios from the GFDL-ESM2M
-       - stab_T12, stab_T15, stab_T20, stab_T25, stab_T30 for 1.2, 1.5, 2.0, 2.5 and 3.0°C Stabilisation 
+       - stab_T12, stab_T15, stab_T20, stab_T25, stab_T30 for 1.2, 1.5, 2.0, 2.5 and 3.0°C stabilization (note that the journal typesetting changed "Stabilisation" to "stabilization" for the main and extended data figures, but we kept it for the supplementary information and text)
        - oversh_20OS15, oversh_20OS15, oversh_20OS15 for overshoots peaking at 2.0, 2.5 or 3.0°C and returning to 1.5°C
    - variables are the aggregated sums from individual glaciers for each RGI region or basin. To better compare scenarios, we only used those glaciers that work in all scenarios ("the common running glaciers"). 
    

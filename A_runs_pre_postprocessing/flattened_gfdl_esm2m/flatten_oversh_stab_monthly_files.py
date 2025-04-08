@@ -1,6 +1,5 @@
 # updated script version for flattening gfdl-esm2m overshoot stabilisation scenarios from university of Bern 
-# 'oversh_T20OS15'
-# '
+
 from oggm import utils
 import sys
 import xarray as xr
@@ -12,7 +11,7 @@ import os
 scenario = str(sys.argv[1])
 
 
-path='/home/www/lschuster/provide/gfdl-esm2m_oversh_stab_uni_bern/gfdl_esm2m'
+path='/home/www/lschuster/provide/gfdl-esm2m_oversh_stab_uni_bern/data/additional_data/data_from_others/gfdl_esm2m'
 
 
 ds_ref = xr.open_dataset(path + '/oversh_T20OS15/' + 'atmos_month_1861.nc')
