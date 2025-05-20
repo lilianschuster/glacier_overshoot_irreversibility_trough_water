@@ -3,7 +3,7 @@
 [DOI: 10.5281/zenodo.14247718](https://doi.org/10.5281/zenodo.14247718)
 
 Code and Data to reproduce the glacier projections, figures and analysis of 
-- Schuster, L., Maussion, F., Rounce, D. R., Ultee, L., Schmitt, P.,  Lacroix, F., Frölicher, T., Schleussner, C.-F. (in review): Irreversible glacier change and trough water for centuries after overshooting 1.5°C, Nature Climate Change [https://doi.org/10.1038/s41558-025-02318-w](https://doi.org/10.1038/s41558-025-02318-w)
+- Schuster, L., Maussion, F., Rounce, D. R., Ultee, L., Schmitt, P.,  Lacroix, F., Frölicher, T., Schleussner, C.-F. (2025): Irreversible glacier change and trough water for centuries after overshooting 1.5°C, Nature Climate Change [https://doi.org/10.1038/s41558-025-02318-w](https://doi.org/10.1038/s41558-025-02318-w)
 
 If you use the code or the data, please cite the manuscript above and the dataset/code on Zenodo ([DOI: 10.5281/zenodo.14247718](https://doi.org/10.5281/zenodo.14247718)). 
 
